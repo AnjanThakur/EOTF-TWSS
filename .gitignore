@@ -1,0 +1,8 @@
+.venv/
+.cache/
+__pycache__/
+*.pyc
+data/**/*.edf
+data/**/*.event
+notebooks/outputs/*.png
+notebooks/outputs/*.log

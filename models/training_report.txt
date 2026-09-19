@@ -1,0 +1,44 @@
+$ .venv/Scripts/python.exe -m src.models.train_csp_lda 
+Exit code: 0
+Channel order: ['FC3', 'FC4', 'C3', 'C4', 'CP3', 'CP4']
+Total X.shape: (45, 6, 481)
+Total y.shape: (45,)
+Class counts (1=LEFT, 2=RIGHT): {1: 23, 2: 22}
+
+Train R08+R12; test R04
+Train trials: 30; test trials: 15
+Accuracy: 0.733333 (73.33%)
+Confusion matrix (rows=true, columns=predicted; order: LEFT=1, RIGHT=2):
+[[4 4]
+ [0 7]]
+
+Train R04+R12; test R08
+Train trials: 30; test trials: 15
+Accuracy: 0.600000 (60.00%)
+Confusion matrix (rows=true, columns=predicted; order: LEFT=1, RIGHT=2):
+[[3 5]
+ [1 6]]
+
+Train R04+R08; test R12
+Train trials: 30; test trials: 15
+Accuracy: 0.733333 (73.33%)
+Confusion matrix (rows=true, columns=predicted; order: LEFT=1, RIGHT=2):
+[[7 0]
+ [4 4]]
+
+Mean accuracy: 0.688889 (68.89%)
+Final model trained on 45 trials.
+Saved model: D:/EOTF-TWSS/models/csp_lda_s001.joblib
+Model reload verification: passed
+
+
+$ .venv/Scripts/python.exe -m src.models.train_csp_lda --data-dir data/missing
+Exit code: 1
+Error: Cannot find S001R04.edf under data/missing.
+
+
+Expected validation error: Expected exactly one C3 channel; found [].
+
+Expected validation error: Expected exactly one FC3 channel; found ['fc3.', 'FC3'].
+
+Channel normalization, channel order, input preservation, missing-channel and ambiguous-channel checks: passed.

@@ -1,0 +1,476 @@
+$ .venv/Scripts/python.exe -m src.realtime.demo --no-audio
+Exit code: 0
+DEMO ONLY: S001 R04/R08/R12 were used to train this final model.
+These predictions are not an accuracy evaluation; see models/training_report.txt for leave-one-run-out results.
+Confidence threshold: 70.00%; audio: disabled
+Confidence is model probability, not validated command reliability.
+
+Trial 1 (R04 trial 1)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 96.04%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 2 (R04 trial 2)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 72.14%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 3 (R04 trial 3)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 96.02%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 4 (R04 trial 4)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 93.49%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 5 (R04 trial 5)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 93.19%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 6 (R04 trial 6)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 70.94%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+
+$ .venv/Scripts/python.exe -m src.realtime.demo --no-audio --limit 45
+Exit code: 0
+DEMO ONLY: S001 R04/R08/R12 were used to train this final model.
+These predictions are not an accuracy evaluation; see models/training_report.txt for leave-one-run-out results.
+Confidence threshold: 70.00%; audio: disabled
+Confidence is model probability, not validated command reliability.
+
+Trial 1 (R04 trial 1)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 96.04%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 2 (R04 trial 2)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 72.14%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 3 (R04 trial 3)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 96.02%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 4 (R04 trial 4)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 93.49%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 5 (R04 trial 5)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 93.19%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 6 (R04 trial 6)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 70.94%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 7 (R04 trial 7)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 73.75%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 8 (R04 trial 8)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 93.18%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 9 (R04 trial 9)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 91.81%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 10 (R04 trial 10)
+Actual: LEFT
+Predicted: RIGHT
+Confidence: 55.70%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 11 (R04 trial 11)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 95.87%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 12 (R04 trial 12)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 85.42%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 13 (R04 trial 13)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 73.59%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 14 (R04 trial 14)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 96.17%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 15 (R04 trial 15)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 89.79%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 16 (R08 trial 16)
+Actual: LEFT
+Predicted: RIGHT
+Confidence: 51.19%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 17 (R08 trial 17)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 83.57%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 18 (R08 trial 18)
+Actual: LEFT
+Predicted: RIGHT
+Confidence: 63.53%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 19 (R08 trial 19)
+Actual: RIGHT
+Predicted: LEFT
+Confidence: 65.51%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 20 (R08 trial 20)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 92.90%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 21 (R08 trial 21)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 87.98%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 22 (R08 trial 22)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 77.91%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 23 (R08 trial 23)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 77.51%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 24 (R08 trial 24)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 70.48%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 25 (R08 trial 25)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 84.36%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 26 (R08 trial 26)
+Actual: LEFT
+Predicted: RIGHT
+Confidence: 57.99%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 27 (R08 trial 27)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 93.88%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 28 (R08 trial 28)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 78.85%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 29 (R08 trial 29)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 81.46%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 30 (R08 trial 30)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 69.97%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 31 (R12 trial 31)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 56.88%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 32 (R12 trial 32)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 86.83%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 33 (R12 trial 33)
+Actual: RIGHT
+Predicted: LEFT
+Confidence: 64.54%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 34 (R12 trial 34)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 62.91%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 35 (R12 trial 35)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 72.09%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 36 (R12 trial 36)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 99.20%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 37 (R12 trial 37)
+Actual: RIGHT
+Predicted: LEFT
+Confidence: 57.79%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 38 (R12 trial 38)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 92.17%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 39 (R12 trial 39)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 99.99%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 40 (R12 trial 40)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 98.61%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 41 (R12 trial 41)
+Actual: RIGHT
+Predicted: LEFT
+Confidence: 69.31%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 42 (R12 trial 42)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 99.44%
+Decision: LEFT
+Word: YES
+Sentence: Yes.
+
+Trial 43 (R12 trial 43)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 98.80%
+Decision: RIGHT
+Word: NO
+Sentence: No.
+
+Trial 44 (R12 trial 44)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 59.03%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 45 (R12 trial 45)
+Actual: RIGHT
+Predicted: LEFT
+Confidence: 68.57%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+
+$ .venv/Scripts/python.exe -m src.realtime.demo --no-audio --limit 2 --threshold 0.99
+Exit code: 0
+DEMO ONLY: S001 R04/R08/R12 were used to train this final model.
+These predictions are not an accuracy evaluation; see models/training_report.txt for leave-one-run-out results.
+Confidence threshold: 99.00%; audio: disabled
+Confidence is model probability, not validated command reliability.
+
+Trial 1 (R04 trial 1)
+Actual: RIGHT
+Predicted: RIGHT
+Confidence: 96.04%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+Trial 2 (R04 trial 2)
+Actual: LEFT
+Predicted: LEFT
+Confidence: 72.14%
+Decision: UNKNOWN
+Word: UNKNOWN
+Sentence: (none)
+
+
+$ .venv/Scripts/python.exe -m src.realtime.demo --no-audio --threshold 1.1
+Exit code: 1
+Error: Confidence threshold must be between 0 and 1.
+
+
+$ .venv/Scripts/python.exe -m src.realtime.demo --no-audio --model-path models/missing.joblib
+Exit code: 1
+Error: Model file not found: models/missing.joblib
+
+
+$ .venv/Scripts/python.exe -m unittest discover -s tests -v
+Exit code: 0
+test_audio_disabled_and_enabled_engine_calls (test_inference.InferenceTests.test_audio_disabled_and_enabled_engine_calls) ... ok
+test_both_command_sentences (test_inference.InferenceTests.test_both_command_sentences) ... ok
+test_invalid_input_and_threshold (test_inference.InferenceTests.test_invalid_input_and_threshold) ... ok
+test_no_probability_is_unknown (test_inference.InferenceTests.test_no_probability_is_unknown) ... ok
+test_probability_uses_class_order_and_threshold_boundary (test_inference.InferenceTests.test_probability_uses_class_order_and_threshold_boundary) ... ok
+test_unknown_never_speaks (test_inference.InferenceTests.test_unknown_never_speaks) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.004s
+
+OK
+
+
+$ .venv/Scripts/python.exe -m pip check
+Exit code: 0
+No broken requirements found.

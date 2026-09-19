@@ -1,0 +1,23 @@
+Test exit code: 0
+test_audio_disabled_and_enabled_engine_calls (test_inference.InferenceTests.test_audio_disabled_and_enabled_engine_calls) ... ok
+test_both_command_sentences (test_inference.InferenceTests.test_both_command_sentences) ... ok
+test_invalid_input_and_threshold (test_inference.InferenceTests.test_invalid_input_and_threshold) ... ok
+test_no_probability_is_unknown (test_inference.InferenceTests.test_no_probability_is_unknown) ... ok
+test_probability_uses_class_order_and_threshold_boundary (test_inference.InferenceTests.test_probability_uses_class_order_and_threshold_boundary) ... ok
+test_unknown_never_speaks (test_inference.InferenceTests.test_unknown_never_speaks) ... ok
+test_command_flow (test_ui.UITests.test_command_flow) ... 2026-09-19 20:35:23.375 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_exhaustion_and_failure (test_ui.UITests.test_exhaustion_and_failure) ... 2026-09-19 20:35:24.772 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.824s
+
+OK
+
+Server health: HTTP 200: ok
+Server URL: http://127.0.0.1:8501
+First trial: RIGHT, confidence 96.04%, word NO, sentence No.
+Threshold 0.99 on same trial: UNKNOWN, word=None, sentence=None, Speak disabled.
+Audio was mocked during tests; audible playback was not tested.
+Initial test-harness issues corrected: AppTest relative path, chart element name, and Unicode expectation. Sandbox temporary-directory cleanup errors avoided by running tests with normal filesystem access.
