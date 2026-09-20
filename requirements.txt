@@ -9,3 +9,4 @@ pyttsx3==2.99
 streamlit==1.64.0
 pylsl==1.18.2
 PyYAML==6.0.3
+pyriemann==0.12

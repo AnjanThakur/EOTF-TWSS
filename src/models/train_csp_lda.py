@@ -40,9 +40,13 @@ def select_channels(raw: mne.io.BaseRaw) -> mne.io.BaseRaw:
 def find_run(data_dir: Path, run: str, subject: str = "S001") -> Path:
     """Accept a data root, physionet directory, or subject directory."""
     name = f"{subject}{run}.edf"
-    candidates = [data_dir / "physionet" / name,
-                  data_dir / "physionet/S001" / name,
-                  data_dir / subject / name, data_dir / name]
+    candidates = [
+        data_dir / "physionet/MNE-eegbci-data/files/eegmmidb/1.0.0" / subject / name,
+        data_dir / "physionet" / subject / name,
+        data_dir / "physionet" / name,
+        data_dir / subject / name,
+        data_dir / name,
+    ]
     for path in candidates:
         if path.is_file():
             return path
