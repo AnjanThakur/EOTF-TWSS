@@ -1,0 +1,37 @@
+{
+  "phase": "Phase 3 \u2014 Hardware-Independent EEG Representation",
+  "srm": {
+    "dataset": "SRM Resting-State EEG (ds003775)",
+    "subjects_processed": 1,
+    "recordings_processed": 1,
+    "total_windows": 120,
+    "channels": 64,
+    "sampling_frequency_hz": 1024.0,
+    "window_duration_sec": 2.0,
+    "total_features": 3168
+  },
+  "physionet": {
+    "dataset": "PhysioNet Motor Movement/Imagery (S001 R04/R08/R12)",
+    "subject_id": "S001",
+    "total_trials": 45,
+    "channels": 6,
+    "channel_names": [
+      "FC3",
+      "FC4",
+      "C3",
+      "C4",
+      "CP3",
+      "CP4"
+    ],
+    "sampling_frequency_hz": 160.0,
+    "epoch_duration_sec": 3.0,
+    "total_features": 123
+  },
+  "feature_counts": {
+    "srm_total_features": 3168,
+    "physionet_total_features": 123,
+    "temporal_per_channel": 5,
+    "spectral_per_channel": 10,
+    "spatial_per_channel": 2
+  }
+}

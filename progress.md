@@ -101,6 +101,21 @@ The **EOTF-TWSS** project is an end-to-end BCI pipeline that decodes motor image
   - `test_speech.py`: Verifies COM initialization lifecycle and exception handling.
   - `test_ui.py`: Full AppTest integration testing for Streamlit user flows, button states, metric updates, threshold adjustments, and error states.
 
+### 8. Phase 3 — Hardware-Independent EEG Representation Pipeline (`src/features/`, `src/datasets/`)
+- [x] **Hardware & Dataset Abstraction Layer:** Constructed a dataset-agnostic EEG representation pipeline operating on arbitrary sampling rates, channel counts, and window durations.
+- [x] **Generic Feature Extractors (`src/features/`):**
+  - **Temporal (`temporal.py`):** Mean, variance, std, RMS, peak-to-peak amplitude.
+  - **Spectral (`spectral.py`):** Welch PSD band power (Delta 1-4Hz, Theta 4-8Hz, Alpha 8-13Hz, Beta 13-30Hz, Gamma 30-45Hz) with absolute and relative power.
+  - **Spatial (`spatial.py`):** Channel covariance matrices, correlation matrices, spatial channel variance, and cross-channel correlation.
+  - **Unified Extractor (`extractor.py`):** `EEGFeatureExtractor` with structured feature metadata (`feature_name`, `feature_type`, `channel`, `frequency_band`).
+- [x] **Dataset Adapters (`src/datasets/`):**
+  - **SRM Resting-State EEG (`srm.py`):** Ingests BIDS `ds003775` dataset (64 channels @ 1024 Hz), handles git-annex stubs gracefully, and segments continuous recordings into standardized 2.0s windows (120 windows extracted).
+  - **PhysioNet Adapter (`physionet.py`):** Standardizes PhysioNet preprocessed output without touching existing `preprocess.py` pipeline.
+- [x] **Scientific Representation Analysis (`scripts/run_phase3_analysis.py`):**
+  - Processed SRM (64 channels, 1024 Hz, 3,168 features) and PhysioNet S001 (6 channels, 160 Hz, 123 features).
+  - Generated dataset summaries, feature metadata JSON, and publication-quality plots under `results/phase3/plots/` (`psd/`, `band_power/`, `distributions/`, `pca/`).
+- [x] **Expanded Test Suite:** Added `tests/test_features.py` and `tests/test_srm_loader.py` bringing total passing test suite to **42 / 42 tests passing**.
+
 ---
 
 ## Current Status Overview
@@ -109,16 +124,18 @@ The **EOTF-TWSS** project is an end-to-end BCI pipeline that decodes motor image
 |---|:---:|---|
 | **Python Venv & Dependencies** |  Completed | `.venv/` with all packages installed including `pyriemann` |
 | **Data Ingestion (S001–S010)** |  Completed | [data/](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/data/) (`R04`, `R08`, `R12` for 10 subjects) |
+| **SRM Dataset Ingestion** |  Completed | [data/srm/ds003775/](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/data/srm/ds003775/) (64 channels @ 1024 Hz resting state) |
 | **Preprocessing Pipeline** |  Completed | [src/preprocessing/preprocess.py](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/src/preprocessing/preprocess.py) |
 | **CSP + LDA Classifier** |  Completed | [models/csp_lda_s001.joblib](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/models/csp_lda_s001.joblib) (68.89% CV accuracy) |
 | **Filter Bank CSP (FBCSP)** |  Completed | [src/models/fbcsp.py](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/src/models/fbcsp.py) (**68.00%** mean accuracy, **0.4045** MCC) |
 | **Riemannian MDM & TS** |  Completed | [src/models/riemannian.py](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/src/models/riemannian.py) (MDM **66.22%** mean accuracy) |
 | **Phase 2 Benchmark Suite** |  Completed | [results/phase2/summary.md](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/results/phase2/summary.md) |
-| **Phase 2 Scientific Plots** |  Completed | [results/phase2/plots/](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/results/phase2/plots/) |
+| **Phase 3 Feature Representation** |  Completed | [src/features/](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/src/features/) & [src/datasets/](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/src/datasets/) |
+| **Phase 3 Artifacts & Plots** |  Completed | [results/phase3/](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/results/phase3/) (Summary JSONs, CSVs, PSD, PCA plots) |
 | **Realtime Inference Simulator** |  Completed | `.venv/Scripts/python.exe -m src.realtime.demo --no-audio` |
 | **TWSS Speech Engine** |  Completed | [src/twss/speech.py](file:///c:/Projects/Thought_to_Speech/EOTF-TWSS/src/twss/speech.py) |
 | **Streamlit Web UI** |  Completed | `.venv/Scripts/python.exe -m streamlit run ui/app.py` |
-| **Automated Unit Tests** |  Completed | **24 / 24 tests passing** (`.venv/Scripts/python.exe -m unittest discover -s tests -v`) |
+| **Automated Unit Tests** |  Completed | **42 / 42 tests passing** (`.venv/Scripts/python.exe -m unittest discover -s tests -v`) |
 
 ---
 
@@ -130,3 +147,4 @@ The **EOTF-TWSS** project is an end-to-end BCI pipeline that decodes motor image
    - Establish rapid 2-run subject calibration for new users before real-time inference.
 3. **Live Hardware Integration:**
    - Connect physical Upside Down Labs NPG Lite / Beast EEG hardware via `BeastStreamer` LSL buffer.
+

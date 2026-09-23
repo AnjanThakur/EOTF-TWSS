@@ -6,3 +6,4 @@ data/**/*.edf
 data/**/*.event
 notebooks/outputs/*.png
 notebooks/outputs/*.log
+data/srm/

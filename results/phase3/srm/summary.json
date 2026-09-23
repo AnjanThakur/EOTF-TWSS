@@ -1,0 +1,10 @@
+{
+  "dataset": "SRM Resting-State EEG (ds003775)",
+  "subjects_processed": 1,
+  "recordings_processed": 1,
+  "total_windows": 120,
+  "channels": 64,
+  "sampling_frequency_hz": 1024.0,
+  "window_duration_sec": 2.0,
+  "total_features": 3168
+}
