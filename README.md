@@ -96,7 +96,9 @@ as during training. This is offline trial replay, not causal/live filtering.
 six channels in the established order, shape `(6, 481)`, optional actual label,
 and a source identifier. A future hardware adapter can supply an iterable of
 these trials to `run_demo` without changing inference or TWSS code, and reuse
-the shared preprocessing upstream. Hardware timing/buffering is not implemented.
+the shared preprocessing upstream. LSL timing/buffering is implemented in
+`src/acquisition/beast_stream.py`; the raw-live-to-preprocessed-Trial adapter and
+hardware validation remain future work.
 
 `predict_trial` returns the raw predicted class/name, the probability for that
 class, actual label, and a gated decision. Below the threshold (or if probabilities
@@ -112,13 +114,56 @@ Start Command consumes one trial. The sidebar threshold defaults to 0.70;
 changing it rechecks the current trial without advancing the source. UNKNOWN
 produces no word or sentence and disables Speak. Speech is off by default;
 enable it and click Speak to play audio on the computer running Streamlit.
-Actual labels appear only in Debug Mode. Reset replay restarts the source.
+Actual labels appear in Debug Mode on Dashboard and always in Held-Out Demo.
+Reset replay restarts the selected source.
 
 `src/realtime/controller.py` accepts an iterable of existing `Trial` objects.
 The UI's `create_controller` connects the dataset source to the saved model;
 a future BeastStreamer can replace the source without changing preprocessing,
 inference, or TWSS mapping. State is separate for each browser session.
-No model fitting is performed. These training-data demonstrations are not
-accuracy evaluations.
+Dashboard uses the frozen saved model and is a demonstration, not an accuracy
+evaluation. Held-Out Demo fits a separate in-memory model on two runs and replays
+only the third; changing subject/run resets the replay. Navigation also includes
+Evaluation, Model Comparison and Research / About, using stored result reports.
 
 Run tests: `.venv/Scripts/python.exe -m unittest discover -s tests -v`.
+
+## Reviewed status and USB kit setup
+
+Phase 1 remains frozen; Phase 2 comparison models and Phase 3 exploratory
+features are separate research tools, not replacements for the deployed model.
+See [the detailed review](docs/REVIEW_2026-10-02.md),
+[USB-first Beast instructions](docs/USB_KIT_GUIDE.md), and
+[Phase 3 reproducibility limitations](results/phase3/REPRODUCIBILITY_STATUS.md).
+Raw calibration recordings under `data/own/` are ignored by Git.
+
+Run the captured review checks with
+`.venv/Scripts/python.exe scripts/validate_review.py`.
+Exact stdout/stderr and exit codes are saved under `results/review_2026-10-02/`.
+
+## Software research improvements (2026-10-02)
+
+The frozen model/config/preprocessing and Phase-1 result files remain unchanged.
+Reproduce separate experiments with:
+
+```powershell
+.venv/Scripts/python.exe -m scripts.run_research_experiments
+.venv/Scripts/python.exe -m scripts.reproduce_phase3
+.venv/Scripts/python.exe -m scripts.validate_software_improvements
+```
+
+The first command exports frozen-score analysis, six predefined montages, four
+bands, held-out confidence/rejection, CSP interpretation and deterministic Phase-2
+reproduction. Use `--tasks analysis channels bands confidence csp phase2` to choose
+stages; confidence needs the completed band report. New experiment settings/results
+are kept outside Phase 1 and historical Phase 2. No exploratory leader is deployed.
+
+The SRM dataset is now under ignored `data/srm/ds003775/` (634 objects, 4.82 GB).
+The Phase-3 command uses the existing five-subject limit, validates staging outputs
+before promoting them and preserves the original artifacts in
+`results/phase3_historical/`. One sub-041 EDF has an invalid date-second field;
+the inventory records that source-file failure. The real subset loader test runs.
+
+See [technical overview](docs/TWSS_TECHNICAL_OVERVIEW.md),
+[literature review](docs/LITERATURE_REVIEW.md), and
+[detailed software improvements report](reports/software_improvements_report.md).

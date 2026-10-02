@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import List, Optional, Union
 import glob
 import re
+import warnings
 
 mne_import_error = None
 try:
@@ -68,6 +69,13 @@ def load_srm_dataset(
     """
     if mne_import_error is not None:
         raise RuntimeError("MNE is required to load SRM dataset.") from mne_import_error
+    if not np.isfinite(window_duration) or window_duration <= 0:
+        raise ValueError("window_duration must be finite and positive.")
+    if not np.isfinite(overlap) or not 0 <= overlap < 1:
+        raise ValueError("overlap must be in [0, 1).")
+    for limit in (max_subjects, max_recordings):
+        if limit is not None and (limit < 1 or int(limit) != limit):
+            raise ValueError("Dataset limits must be positive integers.")
 
     path = Path(dataset_dir)
     if not path.is_dir():
@@ -79,11 +87,10 @@ def load_srm_dataset(
     if not all_edf_files:
         raise FileNotFoundError(f"No EDF files found in {path.as_posix()}")
 
-    # Filter out empty or git-annex stub files (< 100KB)
-    edf_files_valid = [f for f in all_edf_files if Path(f).is_file() and Path(f).stat().st_size > 100_000]
-
+    # Let MNE validate EDF contents; valid short recordings can be below 100KB.
+    edf_files_valid = [f for f in all_edf_files if Path(f).is_file()]
     if not edf_files_valid:
-        raise FileNotFoundError(f"No valid EDF files (>100KB) found in {path.as_posix()}")
+        raise FileNotFoundError(f"No readable EDF files found in {path.as_posix()}")
 
     # Group by subject
     subjects_map = {}
@@ -117,20 +124,30 @@ def load_srm_dataset(
     for edf_file in files_to_load:
         try:
             raw = mne.io.read_raw_edf(edf_file, preload=True, verbose=False)
-        except Exception:
+        except (OSError, ValueError) as exc:
+            warnings.warn(f"Skipped unreadable SRM recording {edf_file}: {exc}")
             continue
         raw.pick("eeg")
 
         if target_channels is not None:
-            raw.pick([ch for ch in target_channels if ch in raw.ch_names])
+            missing = set(target_channels) - set(raw.ch_names)
+            if missing:
+                raise ValueError(f"SRM recording {edf_file} lacks requested channels: {sorted(missing)}")
+            raw.pick(target_channels)
 
         if sampling_rate is None:
             sampling_rate = float(raw.info["sfreq"])
             channel_names = list(raw.ch_names)
+        elif sampling_rate != raw.info["sfreq"] or channel_names != raw.ch_names:
+            raise ValueError(f"SRM recording {edf_file} has inconsistent sampling rate or channel order.")
 
         data = raw.get_data()  # Shape: (channels, total_samples)
+        if not np.isfinite(data).all():
+            raise ValueError(f"Non-finite EEG in {edf_file}")
         sfreq = raw.info["sfreq"]
         n_samples_per_win = int(round(window_duration * sfreq))
+        if n_samples_per_win < 1:
+            raise ValueError("Window duration is shorter than one sample.")
         step_samples = int(round(n_samples_per_win * (1.0 - overlap)))
 
         if step_samples < 1:

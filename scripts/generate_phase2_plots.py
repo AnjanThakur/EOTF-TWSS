@@ -1,7 +1,11 @@
 """Generate high-resolution scientific visualization plots for Phase 2 benchmark results."""
 
 import json
+import os
 from pathlib import Path
+os.environ.setdefault('MPLCONFIGDIR', str(Path(__file__).resolve().parents[1] / '.cache/matplotlib'))
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -10,7 +14,10 @@ RESULTS_DIR = PROJECT_ROOT / "results/phase2"
 PLOTS_DIR = RESULTS_DIR / "plots"
 
 
-def generate_plots():
+def generate_plots(results_dir=RESULTS_DIR, output_dir=None, seed=0):
+    RESULTS_DIR = Path(results_dir)
+    PLOTS_DIR = Path(output_dir) if output_dir else RESULTS_DIR / "plots"
+    rng = np.random.default_rng(seed)
     PLOTS_DIR.mkdir(parents=True, exist_ok=True)
     results_json = RESULTS_DIR / "results.json"
     if not results_json.is_file():
@@ -90,7 +97,7 @@ def generate_plots():
     # Scatter individual points
     for i, m_id in enumerate(model_ids):
         y_pts = np.array(sub_acc[m_id]) * 100
-        x_pts = np.random.normal(i + 1, 0.04, size=len(y_pts))
+        x_pts = rng.normal(i + 1, 0.04, size=len(y_pts))
         ax.scatter(x_pts, y_pts, color="black", alpha=0.7, zorder=3, s=25)
 
     ax.axhline(50, color="gray", linestyle="--", alpha=0.7, label="Chance (50%)")

@@ -39,8 +39,13 @@ def evaluate_subject_model(
         (20.0, 24.0),
         (24.0, 30.0),
     ),
+    n_components_per_band: int = 2,
+    n_features_to_select: int = 6,
+    random_state: int = 0,
 ) -> list[dict]:
     """Evaluate one model on one subject under Leave-One-Run-Out Cross-Validation."""
+    from src.models.phase1_config import validate_runs
+    validate_runs(runs)
     if model_id == "fbcsp_lda":
         X, y, groups = load_subject_fbcsp(data_dir, subject, runs, sub_bands)
     else:
@@ -50,13 +55,15 @@ def evaluate_subject_model(
     for held_out in runs:
         test = groups == held_out
         train = ~test
-        if np.any(np.isin(groups[train], groups[test])):
+        if not train.any() or not test.any() or np.any(np.isin(groups[train], groups[test])):
             raise AssertionError("Train/test run overlap detected.")
 
         if model_id == "baseline_csp_lda":
             model = build_pipeline()
         elif model_id == "fbcsp_lda":
-            model = FBCSPPipeline(n_components_per_band=2, n_features_to_select=6)
+            model = FBCSPPipeline(n_components_per_band=n_components_per_band,
+                                  n_features_to_select=n_features_to_select,
+                                  random_state=random_state)
         elif model_id == "riemannian_mdm":
             model = build_riemannian_mdm_pipeline()
         elif model_id == "riemannian_tangent_space_lda":
@@ -104,6 +111,9 @@ def run_phase2_evaluation(
 ) -> dict:
     """Run Phase 2 evaluation across all configured models and subjects."""
     config = yaml.safe_load(Path(config_path).read_text(encoding="utf-8"))
+    from src.models.phase1_config import validate_preprocessing, validate_runs
+    validate_preprocessing(config, phase=2)
+    validate_runs(config["runs"])
     sub_bands = tuple(tuple(b) for b in config["sub_bands"])
     runs = tuple(config["runs"])
 
@@ -116,7 +126,9 @@ def run_phase2_evaluation(
         for subject in config["subjects"]:
             try:
                 subject_rows = evaluate_subject_model(
-                    data_dir, subject, model_id, runs, sub_bands
+                    data_dir, subject, model_id, runs, sub_bands,
+                    config["csp_components_per_band"], config["n_features_to_select"],
+                    config["random_seeds"][0],
                 )
                 all_rows.extend(subject_rows)
                 subject_mean_acc = np.mean([r["accuracy"] for r in subject_rows])
@@ -184,6 +196,7 @@ def generate_markdown_summary(
         "# TWSS Phase 2 Benchmark Evaluation Report",
         "",
         "Controlled evaluation comparing Baseline CSP+LDA, Filter Bank CSP (FBCSP), Riemannian MDM, and Riemannian Tangent Space + LDA under Leave-One-Run-Out Cross-Validation.",
+        "Summary standard deviations are across 30 held-out folds, not ten subject means. F1 uses LEFT=1 as the positive class. Model comparisons are exploratory; choosing a winner on these folds does not validate deployment on new users.",
         "",
         "## Overall Model Performance Comparison",
         "",

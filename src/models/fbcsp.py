@@ -1,6 +1,7 @@
 """Filter Bank Common Spatial Pattern (FBCSP) implementation for multi-band EEG decoding."""
 
 from pathlib import Path
+from functools import partial
 import mne
 import numpy as np
 from sklearn.base import BaseEstimator, ClassifierMixin
@@ -9,7 +10,7 @@ from sklearn.feature_selection import SelectKBest, mutual_info_classif
 from mne.decoding import CSP
 
 from src.preprocessing.preprocess import load_eeg, extract_events
-from src.models.train_csp_lda import find_run, select_channels
+from src.models.train_csp_lda import CHANNELS, find_run, select_channels
 
 DEFAULT_SUBBANDS = ((8.0, 12.0), (12.0, 16.0), (16.0, 20.0), (20.0, 24.0), (24.0, 30.0))
 
@@ -19,6 +20,7 @@ def load_subject_fbcsp(
     subject: str = "S001",
     runs: tuple[str, ...] = ("R04", "R08", "R12"),
     sub_bands: tuple[tuple[float, float], ...] = DEFAULT_SUBBANDS,
+    channels: tuple[str, ...] = CHANNELS,
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     """Load continuous EEG, filter into sub-bands, epoch each band independently,
 
@@ -32,7 +34,7 @@ def load_subject_fbcsp(
 
     for run in runs:
         edf_path = find_run(data_dir, run, subject)
-        raw = select_channels(load_eeg(edf_path))
+        raw = select_channels(load_eeg(edf_path), channels)
         events, _ = extract_events(raw)
 
         band_epochs_data = []
@@ -68,7 +70,7 @@ def load_subject_fbcsp(
     return X, y, groups
 
 
-class FBCSPPipeline(BaseEstimator, ClassifierMixin):
+class FBCSPPipeline(ClassifierMixin, BaseEstimator):
     """Filter Bank CSP Classifier with Mutual Information Feature Selection and LDA.
 
     Input X shape: (n_trials, n_bands, n_channels, n_samples)
@@ -121,7 +123,9 @@ class FBCSPPipeline(BaseEstimator, ClassifierMixin):
         # 2. Fit Mutual Information Feature Selection on training features
         total_features = all_features.shape[1]
         k = min(self.n_features_to_select, total_features)
-        self.selector_ = SelectKBest(score_func=mutual_info_classif, k=k)
+        self.selector_ = SelectKBest(
+            score_func=partial(mutual_info_classif, random_state=self.random_state), k=k
+        )
         selected_features = self.selector_.fit_transform(all_features, y)
 
         # 3. Fit LDA classifier on selected training features

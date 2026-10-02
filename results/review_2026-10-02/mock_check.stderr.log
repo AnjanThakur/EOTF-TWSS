@@ -1,0 +1,10 @@
+2026-10-02 17:14:53.205 (   0.007s) [        F1BF6AF8]      netinterfaces.cpp:36    INFO| netif '{A282CADC-971E-4836-973D-557701F6C758}' (status: 2, multicast: 1
+2026-10-02 17:14:53.205 (   0.007s) [        F1BF6AF8]      netinterfaces.cpp:36    INFO| netif '{B47F0855-1035-4DE7-8163-832D35744DA4}' (status: 2, multicast: 1
+2026-10-02 17:14:53.205 (   0.007s) [        F1BF6AF8]      netinterfaces.cpp:36    INFO| netif '{27D5F7A7-FCB5-485D-A7D9-EEA4CF72851F}' (status: 2, multicast: 1
+2026-10-02 17:14:53.205 (   0.007s) [        F1BF6AF8]      netinterfaces.cpp:36    INFO| netif '{C72F1FC2-FC5A-4360-9289-FF9505764180}' (status: 1, multicast: 1
+2026-10-02 17:14:53.205 (   0.007s) [        F1BF6AF8]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 16
+2026-10-02 17:14:53.205 (   0.007s) [        F1BF6AF8]      netinterfaces.cpp:36    INFO| netif '{5E32ACB6-0A62-4C14-AEC0-1DF02404BA0A}' (status: 2, multicast: 1
+2026-10-02 17:14:53.205 (   0.007s) [        F1BF6AF8]      netinterfaces.cpp:36    INFO| netif '{2159B7A0-EFFC-11EE-B261-806E6F6E6963}' (status: 1, multicast: 1
+2026-10-02 17:14:53.205 (   0.007s) [        F1BF6AF8]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 1
+2026-10-02 17:14:53.205 (   0.007s) [        F1BF6AF8]         api_config.cpp:126   INFO| Loaded default config
+2026-10-02 17:14:55.211 (   2.013s) [        F1BF6AF8]             common.cpp:78    INFO| git:64988c6a14b8dc3b3f270ece58eab4f480bfab43/branch:refs/tags/v1.17.7/build:Release/compiler:MSVC-19.29.30159.0/link:SHARED

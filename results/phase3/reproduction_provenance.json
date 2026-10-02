@@ -1,0 +1,64 @@
+{
+  "timestamp_utc": "2026-10-02T12:59:21.643726+00:00",
+  "software_versions": {
+    "python": "3.14.7",
+    "mne": "1.13.2",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "joblib": "1.6.0",
+    "pyttsx3": "2.99",
+    "streamlit": "1.64.0",
+    "pylsl": "1.18.2",
+    "PyYAML": "6.0.3",
+    "pyriemann": "0.12"
+  },
+  "dataset": "SRM ds003775 raw EDF, CC0; public unsigned S3",
+  "processing": {
+    "max_subjects": 5,
+    "window_duration": 2.0,
+    "overlap": 0.0,
+    "artifact_cleaning_added": false,
+    "classification_added": false
+  },
+  "summary": {
+    "phase": "Phase 3 \u2014 Hardware-Independent EEG Representation",
+    "srm": {
+      "dataset": "SRM Resting-State EEG (ds003775)",
+      "subjects_processed": 5,
+      "recordings_processed": 8,
+      "total_windows": 960,
+      "channels": 64,
+      "sampling_frequency_hz": 1024.0,
+      "window_duration_sec": 2.0,
+      "total_features": 3168
+    },
+    "physionet": {
+      "dataset": "PhysioNet Motor Movement/Imagery (S001 R04/R08/R12)",
+      "subject_id": "S001",
+      "total_trials": 45,
+      "channels": 6,
+      "channel_names": [
+        "FC3",
+        "FC4",
+        "C3",
+        "C4",
+        "CP3",
+        "CP4"
+      ],
+      "sampling_frequency_hz": 160.0,
+      "epoch_duration_sec": 3.0,
+      "total_features": 123
+    },
+    "feature_counts": {
+      "srm_total_features": 3168,
+      "physionet_total_features": 123,
+      "temporal_per_channel": 5,
+      "spectral_per_channel": 10,
+      "spatial_per_channel": 2
+    }
+  },
+  "source_code_sha256": "4728f8a33e9c53d9e3ca58e7ada38936c92d201dbc6e9cf86f56e8115e7e614f"
+}

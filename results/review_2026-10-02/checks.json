@@ -1,0 +1,59 @@
+{
+  "tests": {
+    "command": [
+      "D:\\EOTF-TWSS\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-v"
+    ],
+    "returncode": 0,
+    "seconds": 22.109
+  },
+  "dependencies": {
+    "command": [
+      "D:\\EOTF-TWSS\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "returncode": 0,
+    "seconds": 0.514
+  },
+  "lsl_discovery": {
+    "command": [
+      "D:\\EOTF-TWSS\\.venv\\Scripts\\python.exe",
+      "-m",
+      "src.acquisition.list_lsl"
+    ],
+    "returncode": 0,
+    "seconds": 2.257
+  },
+  "heldout_demo": {
+    "command": [
+      "D:\\EOTF-TWSS\\.venv\\Scripts\\python.exe",
+      "-m",
+      "src.realtime.heldout_demo"
+    ],
+    "returncode": 0,
+    "seconds": 2.599
+  },
+  "phase1": {
+    "command": [
+      "D:\\EOTF-TWSS\\.venv\\Scripts\\python.exe",
+      "-c",
+      "from pathlib import Path; from src.models.phase1_evaluation import run_evaluation; import json; r=run_evaluation(output_dir=Path('.cache/review_phase1')); print(json.dumps(r['summary'], indent=2)); print('Skipped:', r['skipped'])"
+    ],
+    "returncode": 0,
+    "seconds": 4.058
+  },
+  "phase2": {
+    "command": [
+      "D:\\EOTF-TWSS\\.venv\\Scripts\\python.exe",
+      "-m",
+      "src.models.phase2_evaluation"
+    ],
+    "returncode": 0,
+    "seconds": 11.231
+  }
+}

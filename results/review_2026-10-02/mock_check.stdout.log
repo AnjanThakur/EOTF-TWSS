@@ -1,0 +1,26 @@
+{
+  "sampling_rate": 100.0,
+  "channel_names": [
+    "CH1",
+    "CH2",
+    "CH3",
+    "CH4",
+    "CH5",
+    "CH6"
+  ],
+  "channel_units": [
+    "unknown",
+    "unknown",
+    "unknown",
+    "unknown",
+    "unknown",
+    "unknown"
+  ],
+  "window_shape": [
+    6,
+    300
+  ],
+  "finite": true,
+  "timestamp_span_seconds": 3.144729499996174,
+  "classification": "not attempted"
+}

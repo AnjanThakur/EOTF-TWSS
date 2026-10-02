@@ -1,0 +1,655 @@
+{
+  "timestamp_utc": "2026-10-02T13:17:07.829927+00:00",
+  "configuration": {
+    "subjects": [
+      "S001"
+    ],
+    "runs": [
+      "R04",
+      "R08",
+      "R12"
+    ],
+    "channels": [
+      "FC3",
+      "FC4",
+      "C3",
+      "C4",
+      "CP3",
+      "CP4"
+    ],
+    "filter": [
+      8,
+      30
+    ],
+    "epoch": [
+      0.5,
+      3.5
+    ],
+    "csp_components": 4,
+    "classifier": "LDA",
+    "confidence_threshold": 0.7,
+    "random_seeds": [
+      0
+    ],
+    "label_mapping": {
+      "T1": 1,
+      "T2": 2,
+      "LEFT": 1,
+      "RIGHT": 2
+    },
+    "experiment": "Held-out demo smoke run",
+    "dataset": "PhysioNet EEGMMIDB 1.0.0",
+    "source_root": "data/",
+    "baseline": null,
+    "evaluation": "Within-subject leave-one-run-out; CSP and LDA fit on two runs only",
+    "f1_positive_label": "LEFT=1",
+    "confusion_order": "rows actual, columns predicted; LEFT, RIGHT",
+    "frozen_phase1_changed": false
+  },
+  "software_versions": {
+    "python": "3.14.7",
+    "mne": "1.13.2",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "joblib": "1.6.0",
+    "pyttsx3": "2.99",
+    "streamlit": "1.64.0",
+    "pylsl": "1.18.2",
+    "PyYAML": "6.0.3",
+    "pyriemann": "0.12"
+  },
+  "description": "Three two-run models, each replaying only its fifteen held-out trials. No saved-model fitting or audio.",
+  "details": {},
+  "tables": {
+    "trials": [
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.979821832336492,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "UNKNOWN",
+        "confidence": 0.540700791526526,
+        "word": null,
+        "sentence": null,
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "UNKNOWN",
+        "confidence": 0.669861406514742,
+        "word": null,
+        "sentence": null,
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.952927894921691,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.724206936101348,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "UNKNOWN",
+        "confidence": 0.529815374263299,
+        "word": null,
+        "sentence": null,
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.73579859219593,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "RIGHT",
+        "decision": "UNKNOWN",
+        "confidence": 0.611694139208694,
+        "word": null,
+        "sentence": null,
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "UNKNOWN",
+        "confidence": 0.685039448332031,
+        "word": null,
+        "sentence": null,
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.702687334350874,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.798329793347781,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.948501355288323,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "RIGHT",
+        "decision": "UNKNOWN",
+        "confidence": 0.552421679890187,
+        "word": null,
+        "sentence": null,
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.994700225087995,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "RIGHT",
+        "decision": "UNKNOWN",
+        "confidence": 0.639158227464242,
+        "word": null,
+        "sentence": null,
+        "held_out": "R04",
+        "train_runs": [
+          "R08",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.893354588466054,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.921588238466095,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.84673513725885,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "LEFT",
+        "decision": "UNKNOWN",
+        "confidence": 0.609539043019384,
+        "word": null,
+        "sentence": null,
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.8711249013493,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.700610839761523,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.730127552867378,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.858631704181252,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.71436713557634,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "RIGHT",
+        "decision": "UNKNOWN",
+        "confidence": 0.534820128672096,
+        "word": null,
+        "sentence": null,
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.796566145717115,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.88921157630942,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.839376783356624,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "UNKNOWN",
+        "confidence": 0.573052131971693,
+        "word": null,
+        "sentence": null,
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "RIGHT",
+        "decision": "UNKNOWN",
+        "confidence": 0.569257590683189,
+        "word": null,
+        "sentence": null,
+        "held_out": "R08",
+        "train_runs": [
+          "R04",
+          "R12"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "LEFT",
+        "decision": "UNKNOWN",
+        "confidence": 0.5037690347094,
+        "word": null,
+        "sentence": null,
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.96850809889161,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.971374674770377,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.951280521940606,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "UNKNOWN",
+        "confidence": 0.580010947356058,
+        "word": null,
+        "sentence": null,
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.999873489483704,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.822126077342897,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.967927086794914,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.99999821543184,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.999584635231364,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.965171528619335,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.999946989951948,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "RIGHT",
+        "decision": "RIGHT",
+        "confidence": 0.998764751294668,
+        "word": "NO",
+        "sentence": "No.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "LEFT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.922405101915269,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      },
+      {
+        "actual": "RIGHT",
+        "prediction": "LEFT",
+        "decision": "LEFT",
+        "confidence": 0.843049617126912,
+        "word": "YES",
+        "sentence": "Yes.",
+        "held_out": "R12",
+        "train_runs": [
+          "R04",
+          "R08"
+        ]
+      }
+    ]
+  }
+}

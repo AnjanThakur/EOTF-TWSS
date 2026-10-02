@@ -6,9 +6,11 @@ import yaml
 from sklearn.metrics import accuracy_score, balanced_accuracy_score, f1_score, matthews_corrcoef, confusion_matrix
 import mne
 from src.models.train_csp_lda import load_subject, build_pipeline, PROJECT_ROOT
+from src.models.phase1_config import load_phase1_config, validate_runs
 
 
 def evaluate_subject(data_dir, subject, runs=("R04", "R08", "R12")):
+    validate_runs(runs)
     X, y, groups = load_subject(data_dir, subject, runs)
     results = []
     for held_out in runs:
@@ -28,7 +30,7 @@ def evaluate_subject(data_dir, subject, runs=("R04", "R08", "R12")):
 
 
 def run_evaluation(data_dir=PROJECT_ROOT / "data", config_path=PROJECT_ROOT / "configs/phase1_config.yaml", output_dir=PROJECT_ROOT / "results/phase1"):
-    config = yaml.safe_load(Path(config_path).read_text(encoding="utf-8")); rows, skipped = [], []
+    config = load_phase1_config(config_path); rows, skipped = [], []
     for subject in config["subjects"]:
         try: rows.extend(evaluate_subject(data_dir, subject, tuple(config["runs"])))
         except FileNotFoundError as exc: skipped.append({"subject": subject, "reason": str(exc)})

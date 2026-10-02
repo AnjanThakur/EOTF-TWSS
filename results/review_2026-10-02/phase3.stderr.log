@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\EOTF-TWSS\scripts\run_phase3_analysis.py", line 265, in <module>
+    run_phase3_analysis()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "D:\EOTF-TWSS\scripts\run_phase3_analysis.py", line 175, in run_phase3_analysis
+    srm_res = load_srm_dataset(
+        dataset_dir=project_root / "data" / "srm" / "ds003775",
+        max_subjects=5,
+        window_duration=2.0,
+    )
+  File "D:\EOTF-TWSS\src\datasets\srm.py", line 82, in load_srm_dataset
+    raise FileNotFoundError(f"SRM dataset directory not found: {path.as_posix()}")
+FileNotFoundError: SRM dataset directory not found: D:/EOTF-TWSS/data/srm/ds003775

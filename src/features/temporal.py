@@ -37,8 +37,8 @@ def extract_temporal_features(X: np.ndarray) -> np.ndarray:
     elif X.ndim != 3:
         raise ValueError(f"Expected 2D or 3D input array, got shape {X.shape}")
 
-    if np.isnan(X).any():
-        raise ValueError("Input EEG array contains NaN values.")
+    if not np.isfinite(X).all():
+        raise ValueError("Input EEG array contains non-finite values.")
 
     if X.shape[2] == 0:
         raise ValueError("Number of time samples per trial must be > 0.")

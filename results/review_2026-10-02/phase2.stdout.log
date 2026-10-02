@@ -1,0 +1,50 @@
+
+--- Evaluating Model: CSP + LDA (Phase 1 Baseline) (baseline_csp_lda) ---
+[baseline_csp_lda] S001: Mean LOOR Accuracy = 68.89%
+[baseline_csp_lda] S002: Mean LOOR Accuracy = 88.89%
+[baseline_csp_lda] S003: Mean LOOR Accuracy = 53.33%
+[baseline_csp_lda] S004: Mean LOOR Accuracy = 73.33%
+[baseline_csp_lda] S005: Mean LOOR Accuracy = 53.33%
+[baseline_csp_lda] S006: Mean LOOR Accuracy = 53.33%
+[baseline_csp_lda] S007: Mean LOOR Accuracy = 95.56%
+[baseline_csp_lda] S008: Mean LOOR Accuracy = 40.00%
+[baseline_csp_lda] S009: Mean LOOR Accuracy = 46.67%
+[baseline_csp_lda] S010: Mean LOOR Accuracy = 73.33%
+
+--- Evaluating Model: Filter Bank CSP (FBCSP) + LDA (fbcsp_lda) ---
+[fbcsp_lda] S001: Mean LOOR Accuracy = 68.89%
+[fbcsp_lda] S002: Mean LOOR Accuracy = 88.89%
+[fbcsp_lda] S003: Mean LOOR Accuracy = 55.56%
+[fbcsp_lda] S004: Mean LOOR Accuracy = 75.56%
+[fbcsp_lda] S005: Mean LOOR Accuracy = 60.00%
+[fbcsp_lda] S006: Mean LOOR Accuracy = 55.56%
+[fbcsp_lda] S007: Mean LOOR Accuracy = 91.11%
+[fbcsp_lda] S008: Mean LOOR Accuracy = 62.22%
+[fbcsp_lda] S009: Mean LOOR Accuracy = 55.56%
+[fbcsp_lda] S010: Mean LOOR Accuracy = 66.67%
+
+--- Evaluating Model: Riemannian MDM (riemannian_mdm) ---
+[riemannian_mdm] S001: Mean LOOR Accuracy = 75.56%
+[riemannian_mdm] S002: Mean LOOR Accuracy = 88.89%
+[riemannian_mdm] S003: Mean LOOR Accuracy = 62.22%
+[riemannian_mdm] S004: Mean LOOR Accuracy = 77.78%
+[riemannian_mdm] S005: Mean LOOR Accuracy = 53.33%
+[riemannian_mdm] S006: Mean LOOR Accuracy = 55.56%
+[riemannian_mdm] S007: Mean LOOR Accuracy = 80.00%
+[riemannian_mdm] S008: Mean LOOR Accuracy = 46.67%
+[riemannian_mdm] S009: Mean LOOR Accuracy = 57.78%
+[riemannian_mdm] S010: Mean LOOR Accuracy = 64.44%
+
+--- Evaluating Model: Riemannian Tangent Space + LDA (riemannian_tangent_space_lda) ---
+[riemannian_tangent_space_lda] S001: Mean LOOR Accuracy = 60.00%
+[riemannian_tangent_space_lda] S002: Mean LOOR Accuracy = 82.22%
+[riemannian_tangent_space_lda] S003: Mean LOOR Accuracy = 53.33%
+[riemannian_tangent_space_lda] S004: Mean LOOR Accuracy = 51.11%
+[riemannian_tangent_space_lda] S005: Mean LOOR Accuracy = 57.78%
+[riemannian_tangent_space_lda] S006: Mean LOOR Accuracy = 48.89%
+[riemannian_tangent_space_lda] S007: Mean LOOR Accuracy = 84.44%
+[riemannian_tangent_space_lda] S008: Mean LOOR Accuracy = 48.89%
+[riemannian_tangent_space_lda] S009: Mean LOOR Accuracy = 46.67%
+[riemannian_tangent_space_lda] S010: Mean LOOR Accuracy = 57.78%
+
+Phase 2 evaluation complete! Artifacts saved in D:/EOTF-TWSS/results/phase2

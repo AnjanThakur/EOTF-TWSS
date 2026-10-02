@@ -1,0 +1,8 @@
+{
+  "models/csp_lda_s001.joblib": "3ddbf91d3abfc281248545d4db191eb2139cee28dd35aa25e56fdfb18f6d043b",
+  "configs/phase1_config.yaml": "bd7972dfcf3cfdb7d581c41c88a20a3c4d7f4a10d3416867fcf5975e33febc1f",
+  "src/preprocessing/preprocess.py": "c61452ed30d06d99e6438e0c7d0492d53a19dfd8d80e771eeac0d3f07807b439",
+  "results/phase1/results.json": "147c0311aeb0edd9d99727deca9a302b6311fd59eb95d106ca3148255a937167",
+  "results/phase1/fold_metrics.csv": "2fa2969e38172282664673ce2018cb2cf36a2a0a44f1c60173080992e1a43d8a",
+  "results/phase1/summary.md": "b1224f66bfd59b33c966ba42d028e55731d77984a0b6202428047f2d4fcc2c16"
+}

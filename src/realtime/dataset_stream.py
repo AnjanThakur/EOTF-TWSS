@@ -72,3 +72,57 @@ def dataset_stream(data_dir: str | Path, interval: float = 0.0):
         except StopIteration:
             source.stop()
             return
+
+
+class RawDatasetStreamer(EEGSource):
+    """Calibration storage simulation using raw cue-matched EDF windows.
+
+    This is not a live participant recording. Unlike DatasetStreamer inference
+    replay, it does not band-pass or epoch at 0.5 s and does not relabel trials.
+    """
+    def __init__(self, data_dir, subject="S001"):
+        self.data_dir, self.subject = Path(data_dir), subject
+        self.sampling_rate = 0.0
+        self.channel_names = ()
+        self.channel_units = ()
+        self._windows = None
+        self._label = "LEFT"
+        self.source = ""
+        self.samples_kind = "raw_dataset_replay"
+
+    def start(self):
+        from src.models.train_csp_lda import RUNS, find_run, select_channels
+        from src.preprocessing.preprocess import load_eeg
+        self._windows = {"LEFT": [], "RIGHT": [], "REST": []}
+        self._positions = {name: 0 for name in self._windows}
+        for run in RUNS:
+            raw = select_channels(load_eeg(find_run(self.data_dir, run, self.subject)))
+            rate = float(raw.info["sfreq"])
+            if self.sampling_rate and self.sampling_rate != rate:
+                raise ValueError("Dataset sampling rates differ between runs.")
+            self.sampling_rate, self.channel_names = rate, tuple(raw.ch_names)
+            self.channel_units = ("V",) * len(self.channel_names)
+            samples = raw.get_data()
+            for onset, duration, annotation in zip(raw.annotations.onset, raw.annotations.duration,
+                                                   raw.annotations.description):
+                label = {"T0": "REST", "T1": "LEFT", "T2": "RIGHT"}.get(annotation)
+                if label:
+                    begin = int(round(onset * rate))
+                    end = min(samples.shape[1], begin + int(round(duration * rate)))
+                    self._windows[label].append((samples[:, begin:end], f"{self.subject}{run} {annotation} onset={onset}"))
+
+    def set_trial_label(self, label):
+        self._label = label
+
+    def get_samples(self):
+        if self._windows is None:
+            raise RuntimeError("RawDatasetStreamer is not started.")
+        index = self._positions[self._label]
+        if index >= len(self._windows[self._label]):
+            raise StopIteration(f"No more raw {self._label} dataset trials.")
+        data, self.source = self._windows[self._label][index]
+        self._positions[self._label] += 1
+        return data.copy()
+
+    def stop(self):
+        self._windows = None

@@ -52,7 +52,7 @@ def extract_spectral_features(
     ValueError
         If sampling_rate <= 0, input is invalid, or highest band exceeds Nyquist frequency.
     """
-    if sampling_rate <= 0:
+    if not np.isfinite(sampling_rate) or sampling_rate <= 0:
         raise ValueError(f"sampling_rate must be > 0, got {sampling_rate}")
 
     if bands is None:
@@ -71,8 +71,8 @@ def extract_spectral_features(
     elif X.ndim != 3:
         raise ValueError(f"Expected 2D or 3D input array, got shape {X.shape}")
 
-    if np.isnan(X).any():
-        raise ValueError("Input EEG array contains NaN values.")
+    if not np.isfinite(X).all():
+        raise ValueError("Input EEG array contains non-finite values.")
 
     n_trials, n_channels, n_samples = X.shape
     if n_samples < 4:
@@ -80,12 +80,14 @@ def extract_spectral_features(
 
     nyquist = sampling_rate / 2.0
     for band_name, (f_min, f_max) in bands.items():
-        if f_min >= f_max:
+        if not np.isfinite([f_min, f_max]).all() or f_min < 0 or f_min >= f_max:
             raise ValueError(f"Invalid band range for {band_name}: ({f_min}, {f_max})")
         if f_min >= nyquist:
             raise ValueError(
                 f"Band {band_name} min frequency ({f_min} Hz) reaches or exceeds Nyquist ({nyquist} Hz)"
             )
+        if f_max > nyquist:
+            raise ValueError(f"Band {band_name} exceeds Nyquist ({nyquist} Hz).")
 
     # Compute Welch PSD along the last axis (time samples)
     nperseg = min(n_samples, int(sampling_rate * 2.0))
@@ -112,11 +114,11 @@ def extract_spectral_features(
         total_power = trapezoid(psd, freqs, axis=-1)
 
     # Prevent division by zero
-    total_power_safe = np.where(total_power > 1e-15, total_power, 1.0)
+    total_power_safe = np.where(total_power > 0, total_power, 1.0)
 
     rel_powers = []
     for abs_p in abs_powers:
-        rel_p = np.where(total_power > 1e-15, abs_p / total_power_safe, 0.0)
+        rel_p = np.where(total_power > 0, abs_p / total_power_safe, 0.0)
         rel_powers.append(rel_p)
 
     all_features = abs_powers + rel_powers

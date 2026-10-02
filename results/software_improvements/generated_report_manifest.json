@@ -1,0 +1,358 @@
+[
+  {
+    "path": "D:/EOTF-TWSS/docs/LITERATURE_REVIEW.md",
+    "bytes": 12904
+  },
+  {
+    "path": "D:/EOTF-TWSS/docs/TWSS_TECHNICAL_OVERVIEW.md",
+    "bytes": 12182
+  },
+  {
+    "path": "D:/EOTF-TWSS/reports/software_improvements_report.md",
+    "bytes": 27482
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/analysis/analysis_summary.md",
+    "bytes": 1005
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/analysis/configuration.json",
+    "bytes": 1001
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/analysis/confusion_summary.csv",
+    "bytes": 40
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/analysis/fold_analysis.csv",
+    "bytes": 2855
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/analysis/report.json",
+    "bytes": 17470
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/analysis/report.md",
+    "bytes": 7677
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/analysis/subject_metrics.csv",
+    "bytes": 1214
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/channel_selection/configuration.json",
+    "bytes": 1645
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/channel_selection/fold_metrics.csv",
+    "bytes": 19657
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/channel_selection/heldout_predictions.csv",
+    "bytes": 276793
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/channel_selection/ranking.csv",
+    "bytes": 2664
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/channel_selection/report.json",
+    "bytes": 1097320
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/channel_selection/report.md",
+    "bytes": 15138
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/channel_selection/subject_metrics.csv",
+    "bytes": 7706
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/confidence_analysis/configuration.json",
+    "bytes": 1165
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/confidence_analysis/heldout_predictions.csv",
+    "bytes": 41302
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/confidence_analysis/report.json",
+    "bytes": 167430
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/confidence_analysis/report.md",
+    "bytes": 4018
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/confidence_analysis/summary.md",
+    "bytes": 1946
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/confidence_analysis/threshold_metrics.csv",
+    "bytes": 1370
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/csp_analysis/configuration.json",
+    "bytes": 918
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/csp_analysis/csp_analysis.md",
+    "bytes": 2209
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/csp_analysis/heldout_features.csv",
+    "bytes": 4687
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/csp_analysis/report.json",
+    "bytes": 33054
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/csp_analysis/report.md",
+    "bytes": 7366
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/csp_analysis/spatial_weights.csv",
+    "bytes": 4768
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/frequency_analysis/configuration.json",
+    "bytes": 1159
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/frequency_analysis/fold_metrics.csv",
+    "bytes": 12023
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/frequency_analysis/heldout_predictions.csv",
+    "bytes": 167389
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/frequency_analysis/ranking.csv",
+    "bytes": 1685
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/frequency_analysis/report.json",
+    "bytes": 712814
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/frequency_analysis/report.md",
+    "bytes": 10225
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/frequency_analysis/subject_metrics.csv",
+    "bytes": 4749
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase2_reproduction/comparison.csv",
+    "bytes": 1596
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase2_reproduction/configuration.json",
+    "bytes": 1426
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase2_reproduction/current_folds.csv",
+    "bytes": 15730
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase2_reproduction/fold_metrics.csv",
+    "bytes": 15730
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase2_reproduction/report.json",
+    "bytes": 66380
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase2_reproduction/report.md",
+    "bytes": 4125
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase2_reproduction/results.json",
+    "bytes": 61760
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase2_reproduction/summary.md",
+    "bytes": 2022
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/REPRODUCIBILITY_STATUS.md",
+    "bytes": 2023
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/dataset_summary.json",
+    "bytes": 923
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/download_inventory.json",
+    "bytes": 200054
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/edf_inventory.csv",
+    "bytes": 16953
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/feature_metadata.json",
+    "bytes": 399650
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/physionet/feature_metadata.json",
+    "bytes": 15419
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/physionet/features.csv",
+    "bytes": 122353
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/physionet/summary.json",
+    "bytes": 326
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/reproduction_provenance.json",
+    "bytes": 1757
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/srm/feature_metadata.json",
+    "bytes": 399650
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/srm/features.csv",
+    "bytes": 57557478
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3/srm/summary.json",
+    "bytes": 249
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_historical/ARCHIVE.md",
+    "bytes": 133
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_historical/REPRODUCIBILITY_STATUS.md",
+    "bytes": 1032
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_historical/dataset_summary.json",
+    "bytes": 923
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_historical/feature_metadata.json",
+    "bytes": 418659
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_historical/physionet/features.csv",
+    "bytes": 122325
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_historical/physionet/summary.json",
+    "bytes": 326
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_historical/srm/features.csv",
+    "bytes": 8545129
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_historical/srm/summary.json",
+    "bytes": 249
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_reproduction/dataset_summary.json",
+    "bytes": 923
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_reproduction/download_inventory.json",
+    "bytes": 200054
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_reproduction/edf_inventory.csv",
+    "bytes": 16953
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_reproduction/feature_metadata.json",
+    "bytes": 399650
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_reproduction/physionet/feature_metadata.json",
+    "bytes": 15419
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_reproduction/physionet/features.csv",
+    "bytes": 122353
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_reproduction/physionet/summary.json",
+    "bytes": 326
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_reproduction/srm/feature_metadata.json",
+    "bytes": 399650
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_reproduction/srm/features.csv",
+    "bytes": 57557478
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/phase3_reproduction/srm/summary.json",
+    "bytes": 249
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/freeze_after.json",
+    "bytes": 621
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/freeze_before.json",
+    "bytes": 621
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/generated_report_manifest.json",
+    "bytes": 9188
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/heldout_demo.stderr.log",
+    "bytes": 0
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/heldout_demo.stdout.log",
+    "bytes": 1293
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/heldout_demo/configuration.json",
+    "bytes": 821
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/heldout_demo/report.json",
+    "bytes": 15055
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/heldout_demo/report.md",
+    "bytes": 5532
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/heldout_demo/trials.csv",
+    "bytes": 2963
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/intermediate_heldout_failure.log",
+    "bytes": 11571
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/pip_check.stderr.log",
+    "bytes": 0
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/pip_check.stdout.log",
+    "bytes": 31
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/unittest.stderr.log",
+    "bytes": 10938
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/unittest.stdout.log",
+    "bytes": 249
+  },
+  {
+    "path": "D:/EOTF-TWSS/results/software_improvements/validation.json",
+    "bytes": 3750
+  }
+]

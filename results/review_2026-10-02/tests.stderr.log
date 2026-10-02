@@ -1,0 +1,77 @@
+test_beast_is_explicit (tests.test_acquisition.AcquisitionTests.test_beast_is_explicit) ... 2026-10-02 17:13:35.337 (   0.465s) [        158B0820]      netinterfaces.cpp:36    INFO| netif '{A282CADC-971E-4836-973D-557701F6C758}' (status: 2, multicast: 1
+2026-10-02 17:13:35.337 (   0.465s) [        158B0820]      netinterfaces.cpp:36    INFO| netif '{B47F0855-1035-4DE7-8163-832D35744DA4}' (status: 2, multicast: 1
+2026-10-02 17:13:35.337 (   0.465s) [        158B0820]      netinterfaces.cpp:36    INFO| netif '{27D5F7A7-FCB5-485D-A7D9-EEA4CF72851F}' (status: 2, multicast: 1
+2026-10-02 17:13:35.337 (   0.465s) [        158B0820]      netinterfaces.cpp:36    INFO| netif '{C72F1FC2-FC5A-4360-9289-FF9505764180}' (status: 1, multicast: 1
+2026-10-02 17:13:35.337 (   0.465s) [        158B0820]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 16
+2026-10-02 17:13:35.337 (   0.465s) [        158B0820]      netinterfaces.cpp:36    INFO| netif '{5E32ACB6-0A62-4C14-AEC0-1DF02404BA0A}' (status: 2, multicast: 1
+2026-10-02 17:13:35.337 (   0.465s) [        158B0820]      netinterfaces.cpp:36    INFO| netif '{2159B7A0-EFFC-11EE-B261-806E6F6E6963}' (status: 1, multicast: 1
+2026-10-02 17:13:35.337 (   0.465s) [        158B0820]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 1
+2026-10-02 17:13:35.337 (   0.465s) [        158B0820]         api_config.cpp:126   INFO| Loaded default config
+ok
+test_calibration_balanced_and_metadata (tests.test_acquisition.AcquisitionTests.test_calibration_balanced_and_metadata) ... ok
+test_dataset_source_interface (tests.test_acquisition.AcquisitionTests.test_dataset_source_interface) ... ok
+test_validation (tests.test_acquisition.AcquisitionTests.test_validation) ... ok
+test_extractor_arbitrary_channel_counts (tests.test_features.FeatureExtractionTests.test_extractor_arbitrary_channel_counts) ... ok
+test_extractor_determinism (tests.test_features.FeatureExtractionTests.test_extractor_determinism) ... ok
+test_extractor_metadata_alignment (tests.test_features.FeatureExtractionTests.test_extractor_metadata_alignment) ... ok
+test_spatial_correlation_shape_and_bounds (tests.test_features.FeatureExtractionTests.test_spatial_correlation_shape_and_bounds) ... ok
+test_spatial_covariance_shape_and_symmetry (tests.test_features.FeatureExtractionTests.test_spatial_covariance_shape_and_symmetry) ... ok
+test_spatial_features_extraction (tests.test_features.FeatureExtractionTests.test_spatial_features_extraction) ... ok
+test_spectral_invalid_band_range (tests.test_features.FeatureExtractionTests.test_spectral_invalid_band_range) ... ok
+test_spectral_invalid_sampling_rate (tests.test_features.FeatureExtractionTests.test_spectral_invalid_sampling_rate) ... ok
+test_spectral_shape_and_features (tests.test_features.FeatureExtractionTests.test_spectral_shape_and_features) ... ok
+test_spectral_sinusoid_dominant_band (tests.test_features.FeatureExtractionTests.test_spectral_sinusoid_dominant_band) ... ok
+test_temporal_constant_signal (tests.test_features.FeatureExtractionTests.test_temporal_constant_signal) ... ok
+test_temporal_empty_array (tests.test_features.FeatureExtractionTests.test_temporal_empty_array) ... ok
+test_temporal_nan_handling (tests.test_features.FeatureExtractionTests.test_temporal_nan_handling) ... ok
+test_temporal_shape_2d (tests.test_features.FeatureExtractionTests.test_temporal_shape_2d) ... ok
+test_temporal_shape_3d (tests.test_features.FeatureExtractionTests.test_temporal_shape_3d) ... ok
+test_audio_disabled_and_enabled_engine_calls (tests.test_inference.InferenceTests.test_audio_disabled_and_enabled_engine_calls) ... ok
+test_both_command_sentences (tests.test_inference.InferenceTests.test_both_command_sentences) ... ok
+test_invalid_input_and_threshold (tests.test_inference.InferenceTests.test_invalid_input_and_threshold) ... ok
+test_no_probability_is_unknown (tests.test_inference.InferenceTests.test_no_probability_is_unknown) ... ok
+test_probability_uses_class_order_and_threshold_boundary (tests.test_inference.InferenceTests.test_probability_uses_class_order_and_threshold_boundary) ... ok
+test_unknown_never_speaks (tests.test_inference.InferenceTests.test_unknown_never_speaks) ... ok
+test_discovery_connection_samples_window_and_wrong_count (tests.test_lsl.LSLTests.test_discovery_connection_samples_window_and_wrong_count) ... 2026-10-02 17:13:37.671 (   2.800s) [        158B0820]             common.cpp:78    INFO| git:64988c6a14b8dc3b3f270ece58eab4f480bfab43/branch:refs/tags/v1.17.7/build:Release/compiler:MSVC-19.29.30159.0/link:SHARED
+ok
+test_wrong_count_and_timeout (tests.test_lsl.LSLTests.test_wrong_count_and_timeout) ... ok
+test_config (tests.test_phase1.Phase1Tests.test_config) ... ok
+test_heldout_demo_has_gate_fields (tests.test_phase1.Phase1Tests.test_heldout_demo_has_gate_fields) ... ok
+test_metrics_and_no_overlap (tests.test_phase1.Phase1Tests.test_metrics_and_no_overlap) ... ok
+test_config_validity (tests.test_phase2.Phase2Tests.test_config_validity) ... ok
+test_fbcsp_fold_isolation (tests.test_phase2.Phase2Tests.test_fbcsp_fold_isolation) ... ok
+test_fbcsp_pipeline_fit_predict (tests.test_phase2.Phase2Tests.test_fbcsp_pipeline_fit_predict) ... ok
+test_riemannian_mdm_pipeline (tests.test_phase2.Phase2Tests.test_riemannian_mdm_pipeline) ... ok
+test_riemannian_tangent_space_pipeline (tests.test_phase2.Phase2Tests.test_riemannian_tangent_space_pipeline) ... ok
+test_calibration_failure_preserves_state_and_no_invalid_npz (tests.test_review_regressions.ReviewRegressions.test_calibration_failure_preserves_state_and_no_invalid_npz) ... ok
+test_calibration_flow_clears_before_cue_and_saves_after_rest (tests.test_review_regressions.ReviewRegressions.test_calibration_flow_clears_before_cue_and_saves_after_rest) ... ok
+test_calibration_rate_is_checked_after_start (tests.test_review_regressions.ReviewRegressions.test_calibration_rate_is_checked_after_start) ... ok
+test_config_cannot_silently_change_frozen_filter (tests.test_review_regressions.ReviewRegressions.test_config_cannot_silently_change_frozen_filter) ... ok
+test_constant_channels_have_zero_cross_correlation (tests.test_review_regressions.ReviewRegressions.test_constant_channels_have_zero_cross_correlation) ... ok
+test_duplicate_and_wrong_run_splits_rejected (tests.test_review_regressions.ReviewRegressions.test_duplicate_and_wrong_run_splits_rejected) ... ok
+test_fbcsp_mutual_information_uses_seed (tests.test_review_regressions.ReviewRegressions.test_fbcsp_mutual_information_uses_seed) ... ok
+test_invalid_spectral_nyquist_rejected (tests.test_review_regressions.ReviewRegressions.test_invalid_spectral_nyquist_rejected) ... ok
+test_lsl_ambiguous_selection_rejected (tests.test_review_regressions.ReviewRegressions.test_lsl_ambiguous_selection_rejected) ... ok
+test_lsl_nonfinite_chunk_rejected (tests.test_review_regressions.ReviewRegressions.test_lsl_nonfinite_chunk_rejected) ... ok
+test_lsl_silent_publisher_times_out (tests.test_review_regressions.ReviewRegressions.test_lsl_silent_publisher_times_out) ... ok
+test_lsl_stopped_and_stale_windows_rejected (tests.test_review_regressions.ReviewRegressions.test_lsl_stopped_and_stale_windows_rejected) ... ok
+test_lsl_timestamp_gaps_rejected (tests.test_review_regressions.ReviewRegressions.test_lsl_timestamp_gaps_rejected) ... ok
+test_nonfinite_features_rejected (tests.test_review_regressions.ReviewRegressions.test_nonfinite_features_rejected) ... ok
+test_raw_dataset_simulation_four_seconds_and_provenance (tests.test_review_regressions.ReviewRegressions.test_raw_dataset_simulation_four_seconds_and_provenance) ... ok
+test_small_amplitude_relative_power_is_scale_invariant (tests.test_review_regressions.ReviewRegressions.test_small_amplitude_relative_power_is_scale_invariant) ... ok
+test_srm_short_file_and_inconsistent_metadata (tests.test_review_regressions.ReviewRegressions.test_srm_short_file_and_inconsistent_metadata) ... ok
+test_srm_window_parameters_rejected_before_loading (tests.test_review_regressions.ReviewRegressions.test_srm_window_parameters_rejected_before_loading) ... ok
+test_com_initialized_before_engine_and_balanced_once (tests.test_speech.SpeechTests.test_com_initialized_before_engine_and_balanced_once) ... ok
+test_failed_engine_initialization_can_be_cleaned_up (tests.test_speech.SpeechTests.test_failed_engine_initialization_can_be_cleaned_up) ... ok
+test_physionet_adapter (tests.test_srm_loader.SRMDatasetAdapterTests.test_physionet_adapter) ... ok
+test_srm_loader_non_existent_directory (tests.test_srm_loader.SRMDatasetAdapterTests.test_srm_loader_non_existent_directory) ... ok
+test_srm_loader_real_dataset_subset (tests.test_srm_loader.SRMDatasetAdapterTests.test_srm_loader_real_dataset_subset) ... skipped 'Local SRM dataset directory not found.'
+test_command_flow (tests.test_ui.UITests.test_command_flow) ... 2026-10-02 17:13:52.651 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_exhaustion_and_failure (tests.test_ui.UITests.test_exhaustion_and_failure) ... 2026-10-02 17:13:54.058 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 60 tests in 19.151s
+
+OK (skipped=1)

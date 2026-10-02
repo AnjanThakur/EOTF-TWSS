@@ -7,6 +7,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 import json
 import os
+os.environ.setdefault("MPLCONFIGDIR", str(PROJECT_ROOT / ".cache/matplotlib"))
 import matplotlib
 matplotlib.use("Agg")  # Non-interactive backend
 import matplotlib.pyplot as plt
@@ -14,6 +15,7 @@ import numpy as np
 import pandas as pd
 from scipy.signal import welch
 from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
 
 from src.datasets.srm import load_srm_dataset
 from src.datasets.physionet import load_physionet_adapter
@@ -117,7 +119,8 @@ def plot_pca(features: np.ndarray, labels: np.ndarray, dataset_name: str, output
     """Generate 2D PCA scatter plot of high-dimensional EEG feature space."""
     fig, ax = plt.subplots(figsize=(7, 6))
     pca = PCA(n_components=2)
-    embedding = pca.fit_transform(features)
+    # Features mix volts, volts squared, and dimensionless values.
+    embedding = pca.fit_transform(StandardScaler().fit_transform(features))
 
     var_exp = pca.explained_variance_ratio_
 
@@ -158,10 +161,10 @@ def plot_pca(features: np.ndarray, labels: np.ndarray, dataset_name: str, output
     plt.close(fig)
 
 
-def run_phase3_analysis():
+def run_phase3_analysis(output_dir=None, dataset_dir=None):
     """Execute complete Phase 3 representation pipeline on SRM and PhysioNet datasets."""
     project_root = Path(__file__).resolve().parents[1]
-    base_dir = project_root / "results" / "phase3"
+    base_dir = Path(output_dir) if output_dir else project_root / "results" / "phase3"
     dirs = ensure_dirs(base_dir)
 
     print("=== Phase 3: Hardware-Independent EEG Representation Analysis ===")
@@ -170,7 +173,7 @@ def run_phase3_analysis():
     # 1. Process SRM Resting-State Dataset
     print("\n[1/2] Loading SRM Dataset (ds003775)...")
     srm_res = load_srm_dataset(
-        dataset_dir=project_root / "data" / "srm" / "ds003775",
+        dataset_dir=Path(dataset_dir) if dataset_dir else project_root / "data" / "srm" / "ds003775",
         max_subjects=5,
         window_duration=2.0,
     )
@@ -222,6 +225,8 @@ def run_phase3_analysis():
 
     # 3. Save Feature Metadata
     srm_fv.metadata.to_json(dirs["root"] / "feature_metadata.json", orient="records", indent=2)
+    pn_fv.metadata.to_json(dirs["physionet"] / "feature_metadata.json", orient="records", indent=2)
+    srm_fv.metadata.to_json(dirs["srm"] / "feature_metadata.json", orient="records", indent=2)
 
     # 4. Save Overall Dataset Summary
     dataset_summary = {

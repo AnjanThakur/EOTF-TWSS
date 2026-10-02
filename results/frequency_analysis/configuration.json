@@ -1,0 +1,73 @@
+{
+  "subjects": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010"
+  ],
+  "runs": [
+    "R04",
+    "R08",
+    "R12"
+  ],
+  "channels": [
+    "FC3",
+    "FC4",
+    "C3",
+    "C4",
+    "CP3",
+    "CP4"
+  ],
+  "filter": [
+    8,
+    30
+  ],
+  "epoch": [
+    0.5,
+    3.5
+  ],
+  "csp_components": 4,
+  "classifier": "LDA",
+  "confidence_threshold": 0.7,
+  "random_seeds": [
+    0
+  ],
+  "label_mapping": {
+    "T1": 1,
+    "T2": 2,
+    "LEFT": 1,
+    "RIGHT": 2
+  },
+  "experiment": "Exploratory frequency_analysis",
+  "dataset": "PhysioNet EEGMMIDB 1.0.0",
+  "source_root": "data/",
+  "baseline": null,
+  "evaluation": "Within-subject leave-one-run-out; CSP and LDA fit on two runs only",
+  "f1_positive_label": "LEFT=1",
+  "confusion_order": "rows actual, columns predicted; LEFT, RIGHT",
+  "frozen_phase1_changed": false,
+  "candidates": {
+    "8-12": [
+      8.0,
+      12.0
+    ],
+    "12-30": [
+      12.0,
+      30.0
+    ],
+    "8-20": [
+      8.0,
+      20.0
+    ],
+    "8-30": [
+      8.0,
+      30.0
+    ]
+  }
+}

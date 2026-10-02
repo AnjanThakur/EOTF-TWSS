@@ -37,11 +37,12 @@ class AcquisitionTests(unittest.TestCase):
 
     def test_validation(self):
         with self.assertRaises(ValueError): CalibrationRunner(FakeSource(np.ones((2,20))), "bad id!", "s")
-        with self.assertRaises(ValueError): CalibrationRunner(FakeSource(np.ones((3,20))), "s", "s", 1, output_root=tempfile.gettempdir()).run(False)
-        with self.assertRaises(ValueError): CalibrationRunner(FakeSource(np.ones((2,5))), "s", "s", 1, rest_duration=1, imagery_duration=2).run(False)
+        with tempfile.TemporaryDirectory() as temp:
+            with self.assertRaises(ValueError): CalibrationRunner(FakeSource(np.ones((3,20))), "s", "wrong", 1, output_root=temp).run(False)
+            with self.assertRaises(ValueError): CalibrationRunner(FakeSource(np.ones((2,5))), "s", "short", 1, rest_duration=1, imagery_duration=2, output_root=temp).run(False)
 
     def test_beast_is_explicit(self):
-        beast = BeastStreamer()
+        beast = BeastStreamer(stream_name="TWSS intentionally absent test stream")
         with self.assertRaisesRegex(RuntimeError, "No matching LSL stream|hardware not connected/implemented"): beast.start()
         with self.assertRaisesRegex(RuntimeError, "stopped|hardware not connected/implemented"): beast.get_samples()
 

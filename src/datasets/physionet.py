@@ -7,6 +7,7 @@ import numpy as np
 import mne
 
 from src.preprocessing.preprocess import load_eeg, prepare_data
+from src.models.train_csp_lda import find_run, select_channels
 
 PHYSIONET_CHANNELS = ("FC3", "FC4", "C3", "C4", "CP3", "CP4")
 
@@ -25,19 +26,7 @@ class PhysioNetAdapterResult:
 
 def select_physionet_channels(raw: mne.io.BaseRaw) -> mne.io.BaseRaw:
     """Select standard 6 channels (FC3, FC4, C3, C4, CP3, CP4) matching casing and trailing periods."""
-    selected = []
-    for channel in PHYSIONET_CHANNELS:
-        matches = [
-            name
-            for name in raw.ch_names
-            if name.strip().rstrip(".").upper() == channel
-        ]
-        if len(matches) != 1:
-            raise ValueError(f"Expected exactly one {channel} channel; found {matches}.")
-        selected.append(matches[0])
-    result = raw.copy().pick(selected)
-    result.rename_channels(dict(zip(selected, PHYSIONET_CHANNELS)))
-    return result
+    return select_channels(raw)
 
 
 def load_physionet_adapter(
@@ -73,43 +62,38 @@ def load_physionet_adapter(
         runs = ["R04", "R08", "R12"]
 
     data_path = Path(data_dir)
-    subj_dir = data_path / subject_id
-    if not subj_dir.is_dir():
-        subj_dir = data_path / "physionet" / subject_id
-    if not subj_dir.is_dir():
-        raise FileNotFoundError(f"PhysioNet subject directory not found for {subject_id} in {data_path}")
 
     X_list = []
     y_list = []
     loaded_runs = []
 
     for run_name in runs:
-        edf_file = subj_dir / f"{subject_id}{run_name}.edf"
-        if not edf_file.is_file():
-            continue
+        edf_file = find_run(data_path, run_name, subject_id)
 
         raw = load_eeg(edf_file)
         if channel_selection:
             raw = select_physionet_channels(raw)
 
-        _, X_run, y_run = prepare_data(raw)
+        epochs, X_run, y_run = prepare_data(raw)
+        if X_list and (epochs.info["sfreq"] != sampling_rate or epochs.ch_names != channel_names):
+            raise ValueError("PhysioNet runs must have matching sampling rates and channel order.")
+        sampling_rate, channel_names = epochs.info["sfreq"], epochs.ch_names
 
         X_list.append(X_run)
         y_list.append(y_run)
         loaded_runs.append(run_name)
 
     if not X_list:
-        raise FileNotFoundError(f"No valid PhysioNet runs found for {subject_id} in {subj_dir}")
+        raise FileNotFoundError(f"No valid PhysioNet runs found for {subject_id} in {data_path}")
 
     X_all = np.concatenate(X_list, axis=0)
     y_all = np.concatenate(y_list, axis=0)
 
-    channel_names = list(PHYSIONET_CHANNELS) if channel_selection else [f"Ch{i+1}" for i in range(X_all.shape[1])]
 
     return PhysioNetAdapterResult(
         X=X_all,
         y=y_all,
-        sampling_rate=160.0,
+        sampling_rate=float(sampling_rate),
         channel_names=channel_names,
         subject_id=subject_id,
         recording_runs=loaded_runs,

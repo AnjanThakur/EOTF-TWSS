@@ -5,7 +5,11 @@ import numpy as np
 
 
 class EEGSource(ABC):
-    """A source of channel-first EEG samples in volts."""
+    """Channel-first EEG samples; each source must document its native units.
+
+    MNE preprocessing expects volts. LSL publisher values need confirmed scaling
+    before they can be passed to that preprocessing layer.
+    """
 
     @abstractmethod
     def start(self) -> None: ...

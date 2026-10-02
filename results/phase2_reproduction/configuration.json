@@ -1,0 +1,90 @@
+{
+  "experiment": "Phase-2 deterministic reproduction",
+  "subjects": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010"
+  ],
+  "runs": [
+    "R04",
+    "R08",
+    "R12"
+  ],
+  "channels": [
+    "FC3",
+    "FC4",
+    "C3",
+    "C4",
+    "CP3",
+    "CP4"
+  ],
+  "sub_bands": [
+    [
+      8,
+      12
+    ],
+    [
+      12,
+      16
+    ],
+    [
+      16,
+      20
+    ],
+    [
+      20,
+      24
+    ],
+    [
+      24,
+      30
+    ]
+  ],
+  "csp_components_per_band": 2,
+  "n_features_to_select": 6,
+  "epoch": [
+    0.5,
+    3.5
+  ],
+  "confidence_threshold": 0.7,
+  "random_seeds": [
+    0
+  ],
+  "label_mapping": {
+    "T1": 1,
+    "T2": 2,
+    "LEFT": 1,
+    "RIGHT": 2
+  },
+  "models": [
+    {
+      "id": "baseline_csp_lda",
+      "name": "CSP + LDA (Phase 1 Baseline)"
+    },
+    {
+      "id": "fbcsp_lda",
+      "name": "Filter Bank CSP (FBCSP) + LDA"
+    },
+    {
+      "id": "riemannian_mdm",
+      "name": "Riemannian MDM"
+    },
+    {
+      "id": "riemannian_tangent_space_lda",
+      "name": "Riemannian Tangent Space + LDA"
+    }
+  ],
+  "dataset": "PhysioNet EEGMMIDB 1.0.0",
+  "evaluation": "Within-subject leave-one-run-out",
+  "historical_source": "results/phase2/results.json",
+  "plot_seed": 0,
+  "baseline": null,
+  "f1_positive_label": "LEFT=1"
+}

@@ -1,0 +1,10 @@
+{
+  "model_sha256": "3ddbf91d3abfc281248545d4db191eb2139cee28dd35aa25e56fdfb18f6d043b",
+  "model_matches_frozen_bytes": true,
+  "phase1_folds_match_frozen": true,
+  "phase1_summary_matches_frozen": true,
+  "phase2_folds_match_incoming": true,
+  "phase2_fold_count": 120,
+  "phase2_skipped": [],
+  "mock_check_returncode": 0
+}

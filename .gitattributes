@@ -1,0 +1,4 @@
+
+
+# Preserve captured stdout/stderr bytes, including Windows line endings.
+results/**/*.log -text -diff

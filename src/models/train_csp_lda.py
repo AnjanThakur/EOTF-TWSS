@@ -23,17 +23,20 @@ CHANNELS = ("FC3", "FC4", "C3", "C4", "CP3", "CP4")
 LABELS = [1, 2]
 
 
-def select_channels(raw: mne.io.BaseRaw) -> mne.io.BaseRaw:
+def select_channels(raw: mne.io.BaseRaw, channels=CHANNELS) -> mne.io.BaseRaw:
     """Match case/trailing periods, reject missing or ambiguous channel names."""
+    channels = tuple(str(c).strip().rstrip('.').upper() for c in channels)
+    if len(channels) != 6 or len(set(channels)) != 6:
+        raise ValueError('Expected six distinct channel names.')
     selected = []
-    for channel in CHANNELS:
+    for channel in channels:
         matches = [name for name in raw.ch_names
                    if name.strip().rstrip(".").upper() == channel]
         if len(matches) != 1:
             raise ValueError(f"Expected exactly one {channel} channel; found {matches}.")
         selected.append(matches[0])
     result = raw.copy().pick(selected)
-    result.rename_channels(dict(zip(selected, CHANNELS)))
+    result.rename_channels(dict(zip(selected, channels)))
     return result
 
 

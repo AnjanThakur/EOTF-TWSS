@@ -5,6 +5,23 @@ from streamlit.testing.v1 import AppTest
 
 
 class UITests(unittest.TestCase):
+    def test_research_navigation_and_heldout(self):
+        app = AppTest.from_file('../ui/app.py', default_timeout=30).run()
+        self.assertTrue(any('Demonstration only — replay data may include model training data' in x.value for x in app.info))
+        for page in ['Evaluation', 'Model Comparison', 'Research / About']:
+            app.radio(key='navigation').set_value(page).run()
+            self.assertFalse(app.exception)
+        app.radio(key='navigation').set_value('Held-Out Demo').run()
+        app.button(key='start').click().run()
+        self.assertFalse(app.exception)
+        self.assertIn('S001 R04', app.session_state.controller.latest.trial.source)
+        self.assertTrue(any('Actual dataset label:' in x.value for x in app.markdown))
+        self.assertEqual(app.session_state.controller.processed, 1)
+        app.selectbox(key='heldout_run').set_value('R08').run()
+        self.assertEqual(app.session_state.controller.processed, 0)
+        app.button(key='start').click().run()
+        self.assertIn('S001 R08', app.session_state.controller.latest.trial.source)
+
     def test_command_flow(self):
         app = AppTest.from_file("../ui/app.py", default_timeout=30).run()
         self.assertFalse(app.exception)

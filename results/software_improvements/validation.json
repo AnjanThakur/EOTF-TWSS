@@ -1,0 +1,113 @@
+{
+  "timestamp_utc": "2026-10-02T13:11:57.877941+00:00",
+  "execution": {
+    "unittest": {
+      "command": [
+        "D:\\EOTF-TWSS\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout_file": "results/software_improvements/unittest.stdout.log",
+      "stderr_file": "results/software_improvements/unittest.stderr.log",
+      "tests": 73,
+      "seconds": 22.494,
+      "skipped": 0,
+      "failed": 0,
+      "errors": 0,
+      "passed": 73
+    },
+    "pip_check": {
+      "command": [
+        "D:\\EOTF-TWSS\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout_file": "results/software_improvements/pip_check.stdout.log",
+      "stderr_file": "results/software_improvements/pip_check.stderr.log"
+    }
+  },
+  "phase1_frozen_files": {
+    "models/csp_lda_s001.joblib": {
+      "before": "3ddbf91d3abfc281248545d4db191eb2139cee28dd35aa25e56fdfb18f6d043b",
+      "after": "3ddbf91d3abfc281248545d4db191eb2139cee28dd35aa25e56fdfb18f6d043b",
+      "unchanged": true
+    },
+    "configs/phase1_config.yaml": {
+      "before": "bd7972dfcf3cfdb7d581c41c88a20a3c4d7f4a10d3416867fcf5975e33febc1f",
+      "after": "bd7972dfcf3cfdb7d581c41c88a20a3c4d7f4a10d3416867fcf5975e33febc1f",
+      "unchanged": true
+    },
+    "src/preprocessing/preprocess.py": {
+      "before": "c61452ed30d06d99e6438e0c7d0492d53a19dfd8d80e771eeac0d3f07807b439",
+      "after": "c61452ed30d06d99e6438e0c7d0492d53a19dfd8d80e771eeac0d3f07807b439",
+      "unchanged": true
+    },
+    "results/phase1/results.json": {
+      "before": "147c0311aeb0edd9d99727deca9a302b6311fd59eb95d106ca3148255a937167",
+      "after": "147c0311aeb0edd9d99727deca9a302b6311fd59eb95d106ca3148255a937167",
+      "unchanged": true
+    },
+    "results/phase1/fold_metrics.csv": {
+      "before": "2fa2969e38172282664673ce2018cb2cf36a2a0a44f1c60173080992e1a43d8a",
+      "after": "2fa2969e38172282664673ce2018cb2cf36a2a0a44f1c60173080992e1a43d8a",
+      "unchanged": true
+    },
+    "results/phase1/summary.md": {
+      "before": "b1224f66bfd59b33c966ba42d028e55731d77984a0b6202428047f2d4fcc2c16",
+      "after": "b1224f66bfd59b33c966ba42d028e55731d77984a0b6202428047f2d4fcc2c16",
+      "unchanged": true
+    }
+  },
+  "original_freeze_commit": "7a19eddf045cd7ffc4deb6c8416a922f3d3bf805",
+  "original_artifact_comparison": {
+    "models/csp_lda_s001.joblib": {
+      "bytes_equal": true,
+      "equal_after_crlf_normalization": true
+    },
+    "configs/phase1_config.yaml": {
+      "bytes_equal": true,
+      "equal_after_crlf_normalization": true
+    },
+    "src/preprocessing/preprocess.py": {
+      "bytes_equal": true,
+      "equal_after_crlf_normalization": true
+    },
+    "results/phase1/results.json": {
+      "bytes_equal": false,
+      "equal_after_crlf_normalization": true
+    },
+    "results/phase1/fold_metrics.csv": {
+      "bytes_equal": false,
+      "equal_after_crlf_normalization": true
+    },
+    "results/phase1/summary.md": {
+      "bytes_equal": false,
+      "equal_after_crlf_normalization": true
+    }
+  },
+  "train_test_overlap_errors": [],
+  "staged_added_or_modified_files": [],
+  "staged_files_over_10MB": [],
+  "staged_sensitive_filenames": [],
+  "raw_srm_ignored": true,
+  "software_versions": {
+    "python": "3.14.7",
+    "mne": "1.13.2",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "joblib": "1.6.0",
+    "pyttsx3": "2.99",
+    "streamlit": "1.64.0",
+    "pylsl": "1.18.2",
+    "PyYAML": "6.0.3",
+    "pyriemann": "0.12"
+  }
+}

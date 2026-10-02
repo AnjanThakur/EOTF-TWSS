@@ -1,0 +1,17 @@
+{
+  "dataset": "PhysioNet Motor Movement/Imagery (S001 R04/R08/R12)",
+  "subject_id": "S001",
+  "total_trials": 45,
+  "channels": 6,
+  "channel_names": [
+    "FC3",
+    "FC4",
+    "C3",
+    "C4",
+    "CP3",
+    "CP4"
+  ],
+  "sampling_frequency_hz": 160.0,
+  "epoch_duration_sec": 3.0,
+  "total_features": 123
+}

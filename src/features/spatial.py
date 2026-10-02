@@ -31,8 +31,8 @@ def compute_covariance_matrix(X: np.ndarray) -> np.ndarray:
     elif X.ndim != 3:
         raise ValueError(f"Expected 2D or 3D input array, got shape {X.shape}")
 
-    if np.isnan(X).any():
-        raise ValueError("Input EEG array contains NaN values.")
+    if not np.isfinite(X).all():
+        raise ValueError("Input EEG array contains non-finite values.")
 
     n_trials, n_channels, n_samples = X.shape
     if n_samples < 2:
@@ -69,7 +69,7 @@ def compute_correlation_matrix(X: np.ndarray) -> np.ndarray:
 
     # Extract diagonal std devs
     std_diag = np.sqrt(np.diagonal(cov, axis1=1, axis2=2))
-    std_diag = np.where(std_diag > 1e-15, std_diag, 1.0)
+    std_diag = np.where(std_diag > 0, std_diag, 1.0)
 
     # Outer product per trial: (trials, channels, channels)
     std_outer = np.matmul(
@@ -116,9 +116,9 @@ def extract_spatial_features(X: np.ndarray) -> np.ndarray:
     # 2. Mean cross-correlation with other channels
     if n_channels > 1:
         # Sum of rows minus diagonal (self-corr = 1.0)
-        mean_cross_corr = (np.sum(corr, axis=2) - 1.0) / (n_channels - 1)
+        mean_cross_corr = (np.sum(corr, axis=2) - np.diagonal(corr, axis1=1, axis2=2)) / (n_channels - 1)
     else:
-        mean_cross_corr = np.ones((n_trials, 1), dtype=np.float64)
+        mean_cross_corr = np.zeros((n_trials, 1), dtype=np.float64)
 
     features = np.stack([spatial_variance, mean_cross_corr], axis=-1)
 

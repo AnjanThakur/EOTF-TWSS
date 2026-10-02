@@ -1,0 +1,1222 @@
+{
+  "timestamp_utc": "2026-10-02T13:11:30.555850+00:00",
+  "configuration": {
+    "subjects": [
+      "S001",
+      "S007",
+      "S008"
+    ],
+    "runs": [
+      "R04",
+      "R08",
+      "R12"
+    ],
+    "channels": [
+      "FC3",
+      "FC4",
+      "C3",
+      "C4",
+      "CP3",
+      "CP4"
+    ],
+    "filter": [
+      8,
+      30
+    ],
+    "epoch": [
+      0.5,
+      3.5
+    ],
+    "csp_components": 4,
+    "classifier": "LDA",
+    "confidence_threshold": 0.7,
+    "random_seeds": [
+      0
+    ],
+    "label_mapping": {
+      "T1": 1,
+      "T2": 2,
+      "LEFT": 1,
+      "RIGHT": 2
+    },
+    "experiment": "CSP interpretability",
+    "dataset": "PhysioNet EEGMMIDB 1.0.0",
+    "source_root": "data/",
+    "baseline": null,
+    "evaluation": "Within-subject leave-one-run-out; CSP and LDA fit on two runs only",
+    "f1_positive_label": "LEFT=1",
+    "confusion_order": "rows actual, columns predicted; LEFT, RIGHT",
+    "frozen_phase1_changed": false,
+    "held_out_run": "R04",
+    "train_runs": [
+      "R08",
+      "R12"
+    ]
+  },
+  "software_versions": {
+    "python": "3.14.7",
+    "mne": "1.13.2",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "joblib": "1.6.0",
+    "pyttsx3": "2.99",
+    "streamlit": "1.64.0",
+    "pylsl": "1.18.2",
+    "PyYAML": "6.0.3",
+    "pyriemann": "0.12"
+  },
+  "description": "Descriptive analysis with CSP trained on R08+R12; R04 features are held out. Subject selection uses frozen subject scores.",
+  "details": {},
+  "tables": {
+    "heldout_features": [
+      {
+        "subject": "S001",
+        "trial": 1,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.181658427928728,
+        "feature_2": -0.628268662804328,
+        "feature_3": -0.64984077116181,
+        "feature_4": -0.41949702293121
+      },
+      {
+        "subject": "S001",
+        "trial": 2,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.739646692677336,
+        "feature_2": -0.852455065805614,
+        "feature_3": -1.085520740025876,
+        "feature_4": -0.794552861446948
+      },
+      {
+        "subject": "S001",
+        "trial": 3,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.686287146240283,
+        "feature_2": -1.024057199152811,
+        "feature_3": -0.558979087274567,
+        "feature_4": -0.654537191943298
+      },
+      {
+        "subject": "S001",
+        "trial": 4,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.335389767916851,
+        "feature_2": -1.014678241770177,
+        "feature_3": -1.103567450063412,
+        "feature_4": -0.709271924184994
+      },
+      {
+        "subject": "S001",
+        "trial": 5,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.4219141658195,
+        "feature_2": -0.964704049235307,
+        "feature_3": -0.975120826062315,
+        "feature_4": -1.024290815267736
+      },
+      {
+        "subject": "S001",
+        "trial": 6,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.895921600460475,
+        "feature_2": -0.935067799411219,
+        "feature_3": -0.475513931749272,
+        "feature_4": -0.697432268191328
+      },
+      {
+        "subject": "S001",
+        "trial": 7,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.496050725271716,
+        "feature_2": -0.299199686223416,
+        "feature_3": -0.457810047287974,
+        "feature_4": -0.380111807856063
+      },
+      {
+        "subject": "S001",
+        "trial": 8,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.480505811571197,
+        "feature_2": -0.399302035515352,
+        "feature_3": -0.60749333160593,
+        "feature_4": -0.477258366476669
+      },
+      {
+        "subject": "S001",
+        "trial": 9,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.172370008811967,
+        "feature_2": -0.830111776717847,
+        "feature_3": -0.360930144984741,
+        "feature_4": -0.733542312287614
+      },
+      {
+        "subject": "S001",
+        "trial": 10,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.92640218784121,
+        "feature_2": -0.822674066442551,
+        "feature_3": -0.487324877111276,
+        "feature_4": -0.601250315133355
+      },
+      {
+        "subject": "S001",
+        "trial": 11,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.529011631814031,
+        "feature_2": -0.834986722504438,
+        "feature_3": -0.77081156960437,
+        "feature_4": -0.741018979988063
+      },
+      {
+        "subject": "S001",
+        "trial": 12,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.796597243516308,
+        "feature_2": -0.705347500671278,
+        "feature_3": -1.004434671862165,
+        "feature_4": -0.398293810198088
+      },
+      {
+        "subject": "S001",
+        "trial": 13,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.83306557977956,
+        "feature_2": -0.960071393075554,
+        "feature_3": -0.716502390496136,
+        "feature_4": -0.676374316858927
+      },
+      {
+        "subject": "S001",
+        "trial": 14,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.688055834450662,
+        "feature_2": -0.395121752584186,
+        "feature_3": -0.364918549214112,
+        "feature_4": 0.133466815872353
+      },
+      {
+        "subject": "S001",
+        "trial": 15,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.493159471943825,
+        "feature_2": -0.711624403657579,
+        "feature_3": -0.657780049914944,
+        "feature_4": -0.430889617045316
+      },
+      {
+        "subject": "S007",
+        "trial": 1,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.308937790722229,
+        "feature_2": -0.984605658435964,
+        "feature_3": -0.735392341465527,
+        "feature_4": -1.107857215291535
+      },
+      {
+        "subject": "S007",
+        "trial": 2,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.761617621693074,
+        "feature_2": -1.529390854632625,
+        "feature_3": -0.689363709004485,
+        "feature_4": -0.873439304810654
+      },
+      {
+        "subject": "S007",
+        "trial": 3,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.950635108548391,
+        "feature_2": -1.383902384399103,
+        "feature_3": -0.824013743803739,
+        "feature_4": -0.704840232141242
+      },
+      {
+        "subject": "S007",
+        "trial": 4,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.53037827186171,
+        "feature_2": -0.489541948173846,
+        "feature_3": -0.877328282924225,
+        "feature_4": -1.242303438023766
+      },
+      {
+        "subject": "S007",
+        "trial": 5,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.167898445669219,
+        "feature_2": -1.314869268261852,
+        "feature_3": -1.030571373089239,
+        "feature_4": -0.900303931874647
+      },
+      {
+        "subject": "S007",
+        "trial": 6,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.344906473339115,
+        "feature_2": -0.577203654846301,
+        "feature_3": -0.528098690310348,
+        "feature_4": -1.157135842918691
+      },
+      {
+        "subject": "S007",
+        "trial": 7,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.29423623170785,
+        "feature_2": -0.62697567782478,
+        "feature_3": -0.659397217551756,
+        "feature_4": -1.094351812208769
+      },
+      {
+        "subject": "S007",
+        "trial": 8,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.782004184520221,
+        "feature_2": -0.906438943584428,
+        "feature_3": -0.40641730570073,
+        "feature_4": -0.662621061197101
+      },
+      {
+        "subject": "S007",
+        "trial": 9,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.665974449797276,
+        "feature_2": -1.210677708986148,
+        "feature_3": -0.567725203814542,
+        "feature_4": -0.921190972789164
+      },
+      {
+        "subject": "S007",
+        "trial": 10,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.30925818782446,
+        "feature_2": -0.376401516154125,
+        "feature_3": -0.307706240835816,
+        "feature_4": -0.684848817151704
+      },
+      {
+        "subject": "S007",
+        "trial": 11,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.787200430460065,
+        "feature_2": -1.174231320340093,
+        "feature_3": -0.217808173018939,
+        "feature_4": -1.063467444486624
+      },
+      {
+        "subject": "S007",
+        "trial": 12,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.973749992256091,
+        "feature_2": -1.044616299494895,
+        "feature_3": -0.710932293652583,
+        "feature_4": -0.850874786005577
+      },
+      {
+        "subject": "S007",
+        "trial": 13,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.60897146015768,
+        "feature_2": -0.372595774200767,
+        "feature_3": -0.287680993018264,
+        "feature_4": -0.622581682686606
+      },
+      {
+        "subject": "S007",
+        "trial": 14,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.179051356938456,
+        "feature_2": -1.035260449161707,
+        "feature_3": -0.690121796681832,
+        "feature_4": -0.617653829486898
+      },
+      {
+        "subject": "S007",
+        "trial": 15,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.718148200350169,
+        "feature_2": -0.965147295549678,
+        "feature_3": -0.658051110619964,
+        "feature_4": -1.220006519232054
+      },
+      {
+        "subject": "S008",
+        "trial": 1,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.317475093339356,
+        "feature_2": -0.98652900595388,
+        "feature_3": -0.804193660100342,
+        "feature_4": -0.583012590861504
+      },
+      {
+        "subject": "S008",
+        "trial": 2,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.20274269916732,
+        "feature_2": -1.045733807697368,
+        "feature_3": -1.033372298870729,
+        "feature_4": -0.432285886351427
+      },
+      {
+        "subject": "S008",
+        "trial": 3,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.872998527832998,
+        "feature_2": -0.90247211239647,
+        "feature_3": -0.757113001133228,
+        "feature_4": -0.318496791882871
+      },
+      {
+        "subject": "S008",
+        "trial": 4,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.013143115432981,
+        "feature_2": -0.587908934182438,
+        "feature_3": -0.628657325007484,
+        "feature_4": -0.495723180901413
+      },
+      {
+        "subject": "S008",
+        "trial": 5,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.101932338835613,
+        "feature_2": -0.623524327314166,
+        "feature_3": -0.724475338507205,
+        "feature_4": -0.52374844239092
+      },
+      {
+        "subject": "S008",
+        "trial": 6,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.060355229499709,
+        "feature_2": -0.770139396463055,
+        "feature_3": -0.63885210858235,
+        "feature_4": -0.655237164404412
+      },
+      {
+        "subject": "S008",
+        "trial": 7,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.994314005337426,
+        "feature_2": -0.669208962392668,
+        "feature_3": -1.077065889435484,
+        "feature_4": -0.627773175797562
+      },
+      {
+        "subject": "S008",
+        "trial": 8,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.026700761369475,
+        "feature_2": -0.724843050179177,
+        "feature_3": -0.633708219458318,
+        "feature_4": -0.433432752632921
+      },
+      {
+        "subject": "S008",
+        "trial": 9,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.123064347107308,
+        "feature_2": -0.939543341613098,
+        "feature_3": -0.766336375708158,
+        "feature_4": -0.30951767876924
+      },
+      {
+        "subject": "S008",
+        "trial": 10,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.166129010272155,
+        "feature_2": -0.690933696689611,
+        "feature_3": -0.698188978070574,
+        "feature_4": -0.58628297168184
+      },
+      {
+        "subject": "S008",
+        "trial": 11,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.17806686674926,
+        "feature_2": -0.871876923514108,
+        "feature_3": -0.437602906731518,
+        "feature_4": -0.344274236771678
+      },
+      {
+        "subject": "S008",
+        "trial": 12,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.059693886692014,
+        "feature_2": -0.648436781187457,
+        "feature_3": -0.612852832893822,
+        "feature_4": -0.555521220642348
+      },
+      {
+        "subject": "S008",
+        "trial": 13,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.222783336689757,
+        "feature_2": -0.839857360833722,
+        "feature_3": -0.766447754340137,
+        "feature_4": -0.468381371050252
+      },
+      {
+        "subject": "S008",
+        "trial": 14,
+        "actual": 1,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -1.063290758433175,
+        "feature_2": -0.820355386748655,
+        "feature_3": -0.384807441219602,
+        "feature_4": -0.189641949036244
+      },
+      {
+        "subject": "S008",
+        "trial": 15,
+        "actual": 2,
+        "test_run": "R04",
+        "train_runs": "R08+R12",
+        "feature_1": -0.673236964398829,
+        "feature_2": -0.553937424465606,
+        "feature_3": -0.400603584774953,
+        "feature_4": -0.450322608137893
+      }
+    ],
+    "spatial_weights": [
+      {
+        "subject": "S001",
+        "component": 1,
+        "channel": "FC3",
+        "pattern": -3.133235958e-06,
+        "filter": -1859.3163388081373,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 1,
+        "channel": "FC4",
+        "pattern": 6.769257e-09,
+        "filter": 10310.98139783507,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 1,
+        "channel": "C3",
+        "pattern": -8.479902346e-06,
+        "filter": 107460.2891343984,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 1,
+        "channel": "C4",
+        "pattern": -1.418490592e-06,
+        "filter": -37989.67048474361,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 1,
+        "channel": "CP3",
+        "pattern": -1.4861893375e-05,
+        "filter": -135878.9987135633,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 1,
+        "channel": "CP4",
+        "pattern": -3.055164151e-06,
+        "filter": 54972.46275384139,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 2,
+        "channel": "FC3",
+        "pattern": 7.852409764e-06,
+        "filter": 23294.46509317962,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 2,
+        "channel": "FC4",
+        "pattern": 7.321011588e-06,
+        "filter": -87492.00859367623,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 2,
+        "channel": "C3",
+        "pattern": 9.897249505e-06,
+        "filter": -21036.197820990794,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 2,
+        "channel": "C4",
+        "pattern": 1.5109961069e-05,
+        "filter": 110785.53076012853,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 2,
+        "channel": "CP3",
+        "pattern": 1.1857585009e-05,
+        "filter": -3931.7568024555526,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 2,
+        "channel": "CP4",
+        "pattern": 1.9296410843e-05,
+        "filter": 1993.5782962027072,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 3,
+        "channel": "FC3",
+        "pattern": 1.8304782434e-05,
+        "filter": 107064.60365586629,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 3,
+        "channel": "FC4",
+        "pattern": 5.36962353e-06,
+        "filter": -52794.39517104396,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 3,
+        "channel": "C3",
+        "pattern": 1.2237280532e-05,
+        "filter": -95737.85991409494,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 3,
+        "channel": "C4",
+        "pattern": 3.030846499e-06,
+        "filter": 68595.03722039305,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 3,
+        "channel": "CP3",
+        "pattern": 9.376710519e-06,
+        "filter": 35790.62734854862,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 3,
+        "channel": "CP4",
+        "pattern": 9.62035938e-07,
+        "filter": -50140.10272446634,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 4,
+        "channel": "FC3",
+        "pattern": -5.501412419e-06,
+        "filter": 23015.605541659475,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 4,
+        "channel": "FC4",
+        "pattern": -1.5251102428e-05,
+        "filter": -11772.742384164394,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 4,
+        "channel": "C3",
+        "pattern": -4.541004033e-06,
+        "filter": 8775.924592904263,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 4,
+        "channel": "C4",
+        "pattern": -1.1777873192e-05,
+        "filter": -128271.56847369247,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 4,
+        "channel": "CP3",
+        "pattern": -3.721965205e-06,
+        "filter": -18699.815769078534,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S001",
+        "component": 4,
+        "channel": "CP4",
+        "pattern": -5.787840625e-06,
+        "filter": 102532.84818276689,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 1,
+        "channel": "FC3",
+        "pattern": -1.404855238e-06,
+        "filter": 24543.86827393652,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 1,
+        "channel": "FC4",
+        "pattern": 2.107979262e-06,
+        "filter": -130768.8812913535,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 1,
+        "channel": "C3",
+        "pattern": -3.41114281e-07,
+        "filter": 6292.773214425694,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 1,
+        "channel": "C4",
+        "pattern": 1.0867329921e-05,
+        "filter": 187050.8728071167,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 1,
+        "channel": "CP3",
+        "pattern": 9.68605415e-07,
+        "filter": -12439.092034220794,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 1,
+        "channel": "CP4",
+        "pattern": 1.2202222761e-05,
+        "filter": -58055.7954227496,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 2,
+        "channel": "FC3",
+        "pattern": -6.717903318e-06,
+        "filter": 80255.65993284443,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 2,
+        "channel": "FC4",
+        "pattern": -2.485881525e-06,
+        "filter": 40444.61719052721,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 2,
+        "channel": "C3",
+        "pattern": -1.3697753128e-05,
+        "filter": -118189.28972823487,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 2,
+        "channel": "C4",
+        "pattern": -2.723665694e-06,
+        "filter": -62913.524724898525,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 2,
+        "channel": "CP3",
+        "pattern": -1.653790669e-05,
+        "filter": -4128.900420110623,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 2,
+        "channel": "CP4",
+        "pattern": -3.957429956e-06,
+        "filter": 55307.66267407784,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 3,
+        "channel": "FC3",
+        "pattern": 4.069829531e-06,
+        "filter": -104926.67467383701,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 3,
+        "channel": "FC4",
+        "pattern": 3.903578261e-06,
+        "filter": 27930.36121826162,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 3,
+        "channel": "C3",
+        "pattern": 3.845739285e-06,
+        "filter": 290325.46869243926,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 3,
+        "channel": "C4",
+        "pattern": 2.780901531e-06,
+        "filter": -89376.33660517998,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 3,
+        "channel": "CP3",
+        "pattern": -1.09617372e-06,
+        "filter": -208221.8579803268,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 3,
+        "channel": "CP4",
+        "pattern": 2.539429975e-06,
+        "filter": 87337.99814413539,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 4,
+        "channel": "FC3",
+        "pattern": -1.3977291747e-05,
+        "filter": 48918.393207803456,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 4,
+        "channel": "FC4",
+        "pattern": -1.9930733442e-05,
+        "filter": -98237.40291952959,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 4,
+        "channel": "C3",
+        "pattern": -1.3864690388e-05,
+        "filter": 22964.727111694316,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 4,
+        "channel": "C4",
+        "pattern": -1.7419810866e-05,
+        "filter": -4900.793345214482,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 4,
+        "channel": "CP3",
+        "pattern": -1.4042523276e-05,
+        "filter": -30504.77306851198,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S007",
+        "component": 4,
+        "channel": "CP4",
+        "pattern": -1.563494264e-05,
+        "filter": 30030.99509528277,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 1,
+        "channel": "FC3",
+        "pattern": 5.994249806e-06,
+        "filter": 67839.76211800186,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 1,
+        "channel": "FC4",
+        "pattern": 5.074488228e-06,
+        "filter": -131104.33996342335,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 1,
+        "channel": "C3",
+        "pattern": 4.986663181e-06,
+        "filter": -25598.29029936858,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 1,
+        "channel": "C4",
+        "pattern": 1.0047568132e-05,
+        "filter": 194102.17929299158,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 1,
+        "channel": "CP3",
+        "pattern": 4.573155769e-06,
+        "filter": -9004.205826203324,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 1,
+        "channel": "CP4",
+        "pattern": 7.900646413e-06,
+        "filter": -66170.31155181062,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 2,
+        "channel": "FC3",
+        "pattern": -4.093672921e-06,
+        "filter": 53728.31975508027,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 2,
+        "channel": "FC4",
+        "pattern": -6.1699337e-06,
+        "filter": -109237.2823125795,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 2,
+        "channel": "C3",
+        "pattern": -1.723517059e-06,
+        "filter": -136488.1675424961,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 2,
+        "channel": "C4",
+        "pattern": -4.035024176e-06,
+        "filter": 84086.5415950404,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 2,
+        "channel": "CP3",
+        "pattern": 1.571947197e-06,
+        "filter": 193178.8899968459,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 2,
+        "channel": "CP4",
+        "pattern": -3.355745782e-06,
+        "filter": -103209.2205756783,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 3,
+        "channel": "FC3",
+        "pattern": -1.413688824e-06,
+        "filter": -123400.23312803269,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 3,
+        "channel": "FC4",
+        "pattern": 1.265093175e-06,
+        "filter": 37054.53070676879,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 3,
+        "channel": "C3",
+        "pattern": 3.702245771e-06,
+        "filter": 94401.11775782639,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 3,
+        "channel": "C4",
+        "pattern": 4.842848026e-06,
+        "filter": -69118.8867775068,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 3,
+        "channel": "CP3",
+        "pattern": 5.898552801e-06,
+        "filter": -18037.220316116498,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 3,
+        "channel": "CP4",
+        "pattern": 8.015088316e-06,
+        "filter": 108583.04027256784,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 4,
+        "channel": "FC3",
+        "pattern": -4.523119444e-06,
+        "filter": 86838.67739908266,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 4,
+        "channel": "FC4",
+        "pattern": -2.844038314e-06,
+        "filter": 22052.19719488562,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 4,
+        "channel": "C3",
+        "pattern": -6.936277849e-06,
+        "filter": -259566.00549995175,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 4,
+        "channel": "C4",
+        "pattern": -1.388168525e-06,
+        "filter": -49278.2589428751,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 4,
+        "channel": "CP3",
+        "pattern": -4.52652819e-06,
+        "filter": 95834.43377195799,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      },
+      {
+        "subject": "S008",
+        "component": 4,
+        "channel": "CP4",
+        "pattern": 2.24972922e-07,
+        "filter": 90978.98266746606,
+        "test_run": "R04",
+        "train_runs": "R08+R12"
+      }
+    ]
+  }
+}
