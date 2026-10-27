@@ -2,7 +2,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { Workbook, SpreadsheetFile } from '@oai/artifact-tool';
+import { Workbook, SpreadsheetFile, FileBlob } from '@oai/artifact-tool';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const data = JSON.parse(await fs.readFile(path.join(root, 'reports/analysis.json'), 'utf8'));
@@ -10,6 +10,45 @@ const out = path.join(root, 'reports/outputs/npg_eda');
 const previewDir = path.join(root, 'reports/_preview');
 await fs.mkdir(out, { recursive: true });
 await fs.mkdir(previewDir, { recursive: true });
+const filterNote = data.configuration.filter_settings?.workbook_note || 'Brain mode reported; exact filters and scaling unknown.';
+
+// A metadata-only follow-up edits the existing workbook, preserving its layout.
+if (process.argv.includes('--update-filter-metadata')) {
+  const existing = path.join(out, 'quality_summary.xlsx');
+  const book = await SpreadsheetFile.importXlsx(await FileBlob.load(existing));
+  const sheet = book.worksheets.getItem('Overview');
+  const channelSheet = book.worksheets.getItem('Channel statistics');
+  const before = {
+    overview: structuredClone(sheet.getRange('B2:H34').values),
+    overviewFormulas: structuredClone(sheet.getRange('B2:H34').formulas),
+    channels: structuredClone(channelSheet.getRange('A2:L42').values),
+    channelFormulas: structuredClone(channelSheet.getRange('A2:L42').formulas),
+  };
+  sheet.getRange('C22').values = [[filterNote]];
+  book.recalculate();
+  const after = sheet.getRange('B2:H34').values;
+  for (let r=0;r<before.overview.length;r++) {
+    for (let c=0;c<before.overview[r].length;c++) {
+      if (r===20 && c===1) continue; // C22 within B2:H34.
+      const a=before.overview[r][c], b=after[r][c];
+      if (typeof a==='number' && typeof b==='number' && Math.abs(a-b)<1e-9) continue;
+      if (a!==b) throw new Error(`Unexpected metadata-edit change at row ${r+2}, column ${c+2}`);
+    }
+  }
+  if (JSON.stringify(before.channels)!==JSON.stringify(channelSheet.getRange('A2:L42').values)
+      || JSON.stringify(before.channelFormulas)!==JSON.stringify(channelSheet.getRange('A2:L42').formulas)
+      || JSON.stringify(before.overviewFormulas)!==JSON.stringify(sheet.getRange('B2:H34').formulas)) {
+    throw new Error('Metadata edit changed channel results or formulas.');
+  }
+  const image=await book.render({sheetName:'Overview',range:'B2:H34',scale:1.5,format:'png'});
+  await fs.writeFile(path.join(previewDir,'overview_filter_update.png'),new Uint8Array(await image.arrayBuffer()));
+  await fs.copyFile(existing,path.join(previewDir,'quality_before_filter_update.xlsx'));
+  const updated=await SpreadsheetFile.exportXlsx(book);
+  await updated.save(existing);
+  console.log((await book.inspect({kind:'table',range:'Overview!B22:C22',include:'values',tableMaxRows:1,tableMaxCols:2,maxChars:500})).ndjson);
+  console.log('Updated only Overview!C22; all numeric results and formulas preserved.');
+  process.exit(0);
+}
 
 const wb = Workbook.create();
 const overview = wb.worksheets.add('Overview');
@@ -48,7 +87,7 @@ overview.getRange('D18').values = [['Assumed; not clock-verified']];
 overview.getRange('B20:C26').values = [
   ['*Duration', 'Sample count / assumed rate. Excludes unknown time across counter breaks.'],
   ['Rate evidence', 'About 2 minutes per recording; around 60,000 samples.'],
-  ['Export processing', 'Brain mode reported; exact filters and scaling unknown.'],
+  ['Export processing', filterNote],
   ['Answer task', 'Thought about answers and spoke aloud. No onset markers supplied.'],
   ['Cleaning', 'Annotations only. All rows and finite signal values retained.'],
   ['Units', 'Native exported values; not verified microvolts.'],

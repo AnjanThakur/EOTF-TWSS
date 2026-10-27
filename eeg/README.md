@@ -22,12 +22,26 @@ YES and NO were recorded while answering questions and speaking aloud. They
 are not isolated imagined-speech recordings. The mixed file has no within-file
 word labels or onset times. Left/right clenching body part is unconfirmed.
 
-The reported export setting was "Brain mode". Filters, scaling, and whether the
-export is raw or already processed remain unknown. Values are native units,
-not assumed microvolts.
+The user's Chords Web v2.7.0a screenshot confirms **Brain mode and the 50 Hz
+notch selected on all six channels**. The 50 Hz choice is a mains-interference
+filter, not the sampling rate. [Manufacturer documentation](https://docs.upsidedownlabs.tech/software/chords/chords-web/index.html)
+describes Brain as a 45 Hz low-pass. This is the documented setting, not a
+measurement of the effective filter response in these recordings.
 
-The user initially mentioned 50 Hz but clarified that it was probably a
-frequency setting. Approximate two-minute recordings and around 60,000 rows
+The inspected [public recording code](https://github.com/upsidedownlabs/Chords-Web/blob/a0a77f7df5dcb88d8b21df3e70ead3761fffa309/src/components/Connection.tsx#L1188-L1211)
+processes samples through filters before storing them for export. That revision
+is version **2.7.1a**, whereas the screenshot shows **2.7.0a**. It corroborates
+that the CSVs are likely already processed but does not prove the exact capture
+build or its effective cutoff. Scaling and voltage conversion remain unverified.
+All evidence and source links are in `recordings.json` under `filter_settings`.
+
+The folder `data/raw` means untouched source exports, **not verified raw ADC
+or unfiltered physiological EEG**. No filters were repeated or undone. Spectra
+describe the exported signal and may reflect attenuation and residual components
+from prior processing; a low-pass filter is not a brick-wall frequency cutoff.
+
+The filter screenshot resolves the previously mentioned 50 Hz as a notch
+selection. Approximate two-minute recordings and around 60,000 rows
 suggest a nominal 500 Hz stream. **500 Hz remains provisional**. Sample-index
 and cycles-per-sample plots do not require this assumption. Estimated seconds
 and the secondary Hz axis do. No absolute sample timestamps exist in the files.

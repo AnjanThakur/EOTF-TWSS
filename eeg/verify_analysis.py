@@ -55,8 +55,16 @@ def verify():
             im.verify()
     report=(ROOT/'reports/eda_report.html').read_text(encoding='utf-8')
     import re
+    from urllib.parse import urlparse
     for relative in re.findall(r'(?:src|href)="([^"]+)"',report):
+        if urlparse(relative).scheme or relative.startswith('#'):
+            continue
         assert (ROOT/'reports'/relative).exists(),relative
+    assert result['configuration']['filter_settings']['notch_selected_hz']==50
+    assert result['configuration']['filter_settings']['brain_documented_cutoff_hz']==45
+    assert result['configuration']['filter_settings']['screenshot_version']=='2.7.0a'
+    assert result['configuration']['filter_settings']['inspected_source_version']=='2.7.1a'
+    assert 'Filter settings and export provenance' in report
     workbook=ROOT/'reports/outputs/npg_eda/quality_summary.xlsx'
     from zipfile import ZipFile
     with ZipFile(workbook) as archive:
