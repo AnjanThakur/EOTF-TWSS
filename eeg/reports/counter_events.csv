@@ -1,0 +1,6 @@
+dataset,sample_before,source_csv_row_before,sample_after,source_csv_row_after,counter_before,counter_after,raw_counter_change,action
+yes,249,251,250,252,7.0,194.0,187.0,Start new analysis segment; preserve values
+no,459,461,460,462,243.0,182.0,-61.0,Start new analysis segment; preserve values
+mixed,279,281,280,282,73.0,8.0,-65.0,Start new analysis segment; preserve values
+right,279,281,280,282,79.0,176.0,97.0,Start new analysis segment; preserve values
+left,209,211,210,212,81.0,216.0,135.0,Start new analysis segment; preserve values

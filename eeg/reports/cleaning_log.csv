@@ -1,0 +1,37 @@
+dataset,operation,affected_or_flagged_count,note
+idle,Preserve source snapshot,0,Byte-for-byte copy with SHA-256; original Downloads file untouched
+idle,Numeric validation,0,Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs
+idle,Counter segmentation,0,Boundary flags only; not inferred clock time or proven packet loss
+idle,Amplitude review flags,51,Within-file/channel median/MAD threshold; all flagged values retained
+idle,Signal transformation,0,"No new filters, unit conversion, rereferencing, normalization or interpolation"
+idle,Row removal,0,All source rows retained in original order
+yes,Preserve source snapshot,0,Byte-for-byte copy with SHA-256; original Downloads file untouched
+yes,Numeric validation,0,Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs
+yes,Counter segmentation,1,Boundary flags only; not inferred clock time or proven packet loss
+yes,Amplitude review flags,190,Within-file/channel median/MAD threshold; all flagged values retained
+yes,Signal transformation,0,"No new filters, unit conversion, rereferencing, normalization or interpolation"
+yes,Row removal,0,All source rows retained in original order
+no,Preserve source snapshot,0,Byte-for-byte copy with SHA-256; original Downloads file untouched
+no,Numeric validation,0,Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs
+no,Counter segmentation,1,Boundary flags only; not inferred clock time or proven packet loss
+no,Amplitude review flags,13,Within-file/channel median/MAD threshold; all flagged values retained
+no,Signal transformation,0,"No new filters, unit conversion, rereferencing, normalization or interpolation"
+no,Row removal,0,All source rows retained in original order
+mixed,Preserve source snapshot,0,Byte-for-byte copy with SHA-256; original Downloads file untouched
+mixed,Numeric validation,0,Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs
+mixed,Counter segmentation,1,Boundary flags only; not inferred clock time or proven packet loss
+mixed,Amplitude review flags,4,Within-file/channel median/MAD threshold; all flagged values retained
+mixed,Signal transformation,0,"No new filters, unit conversion, rereferencing, normalization or interpolation"
+mixed,Row removal,0,All source rows retained in original order
+right,Preserve source snapshot,0,Byte-for-byte copy with SHA-256; original Downloads file untouched
+right,Numeric validation,0,Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs
+right,Counter segmentation,1,Boundary flags only; not inferred clock time or proven packet loss
+right,Amplitude review flags,343,Within-file/channel median/MAD threshold; all flagged values retained
+right,Signal transformation,0,"No new filters, unit conversion, rereferencing, normalization or interpolation"
+right,Row removal,0,All source rows retained in original order
+left,Preserve source snapshot,0,Byte-for-byte copy with SHA-256; original Downloads file untouched
+left,Numeric validation,0,Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs
+left,Counter segmentation,1,Boundary flags only; not inferred clock time or proven packet loss
+left,Amplitude review flags,49,Within-file/channel median/MAD threshold; all flagged values retained
+left,Signal transformation,0,"No new filters, unit conversion, rereferencing, normalization or interpolation"
+left,Row removal,0,All source rows retained in original order

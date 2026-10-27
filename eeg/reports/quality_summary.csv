@@ -1,0 +1,7 @@
+dataset,filename,rows,channels,invalid_numeric_cells,invalid_counter_rows,duplicate_full_rows,counter_wraps,counter_discontinuities,segments,flagged_amplitude_rows,flat_channels,assumed_sample_rate_hz,sample_duration_seconds_assuming_rate,rows_retained,rows_removed,finite_signal_values_changed
+idle,normal (2).csv,45120,6,0,0,0,177,0,1,51,0,500.0,90.24,45120,0,0
+yes,yes_responses (2).csv,60000,6,0,0,0,235,1,2,190,0,500.0,120.0,60000,0,0
+no,no_responses (2).csv,61000,6,0,0,0,238,1,2,13,0,500.0,122.0,61000,0,0
+mixed,yes_no_mixed_responses.csv,61000,6,0,0,0,238,1,2,4,0,500.0,122.0,61000,0,0
+right,right.csv,65000,6,0,0,0,254,1,2,343,0,500.0,130.0,65000,0,0
+left,left.csv,61000,6,0,0,0,239,1,2,49,0,500.0,122.0,61000,0,0

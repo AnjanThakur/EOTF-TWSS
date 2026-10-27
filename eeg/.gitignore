@@ -1,0 +1,7 @@
+.analysis_deps/
+node_modules/
+data/
+__pycache__/
+.ipynb_checkpoints/
+reports/_preview/
+reports/outputs/**/*.inspect.ndjson

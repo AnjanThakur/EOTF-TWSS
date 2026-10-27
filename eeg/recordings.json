@@ -1,0 +1,20 @@
+{
+  "analysis_sample_rate_hz": 500,
+  "sample_rate_status": "assumed nominal rate; not verified by timestamps or device metadata",
+  "sample_rate_evidence": "User estimates about two minutes per recording. YES has 60000 rows; NO and mixed have 61000. User clarified that 50 Hz was probably a frequency setting, not sampling rate.",
+  "channel_mapping_status": "user-provided order; physical placement not independently verified",
+  "channel_positions": ["C3", "C4", "F3", "F4", "P3", "P4"],
+  "export_processing": "User reports Brain mode in a Chords/LSL web visualizer; exact filters, scaling, application identity and raw-versus-processed export behaviour are unknown.",
+  "units": "native exported values; voltage conversion unverified",
+  "counter_modulus": 256,
+  "robust_amplitude_flag_threshold": 8,
+  "window_samples": 250,
+  "recordings": [
+    {"id": "idle", "filename": "normal (2).csv", "condition": "Normal/idle, as described by user"},
+    {"id": "yes", "filename": "yes_responses (2).csv", "condition": "Question answering; thought about YES and said answer aloud"},
+    {"id": "no", "filename": "no_responses (2).csv", "condition": "Question answering; thought about NO and said answer aloud"},
+    {"id": "mixed", "filename": "yes_no_mixed_responses.csv", "condition": "Mixed question answers, including speaking; word/onset timing not supplied"},
+    {"id": "right", "filename": "right.csv", "condition": "Right clenching, as described by user; exact body part and task timing unconfirmed"},
+    {"id": "left", "filename": "left.csv", "condition": "Left clenching, as described by user; exact body part and task timing unconfirmed"}
+  ]
+}

@@ -1,0 +1,2090 @@
+{
+  "generated_utc": "2026-10-27T18:42:00.591936+00:00",
+  "configuration": {
+    "analysis_sample_rate_hz": 500,
+    "sample_rate_status": "assumed nominal rate; not verified by timestamps or device metadata",
+    "sample_rate_evidence": "User estimates about two minutes per recording. YES has 60000 rows; NO and mixed have 61000. User clarified that 50 Hz was probably a frequency setting, not sampling rate.",
+    "channel_mapping_status": "user-provided order; physical placement not independently verified",
+    "channel_positions": [
+      "C3",
+      "C4",
+      "F3",
+      "F4",
+      "P3",
+      "P4"
+    ],
+    "export_processing": "User reports Brain mode in a Chords/LSL web visualizer; exact filters, scaling, application identity and raw-versus-processed export behaviour are unknown.",
+    "units": "native exported values; voltage conversion unverified",
+    "counter_modulus": 256,
+    "robust_amplitude_flag_threshold": 8,
+    "window_samples": 250,
+    "recordings": [
+      {
+        "id": "idle",
+        "filename": "normal (2).csv",
+        "condition": "Normal/idle, as described by user"
+      },
+      {
+        "id": "yes",
+        "filename": "yes_responses (2).csv",
+        "condition": "Question answering; thought about YES and said answer aloud"
+      },
+      {
+        "id": "no",
+        "filename": "no_responses (2).csv",
+        "condition": "Question answering; thought about NO and said answer aloud"
+      },
+      {
+        "id": "mixed",
+        "filename": "yes_no_mixed_responses.csv",
+        "condition": "Mixed question answers, including speaking; word/onset timing not supplied"
+      },
+      {
+        "id": "right",
+        "filename": "right.csv",
+        "condition": "Right clenching, as described by user; exact body part and task timing unconfirmed"
+      },
+      {
+        "id": "left",
+        "filename": "left.csv",
+        "condition": "Left clenching, as described by user; exact body part and task timing unconfirmed"
+      }
+    ]
+  },
+  "total_rows": 353120,
+  "quality_summary": [
+    {
+      "dataset": "idle",
+      "filename": "normal (2).csv",
+      "rows": 45120,
+      "channels": 6,
+      "invalid_numeric_cells": 0,
+      "invalid_counter_rows": 0,
+      "duplicate_full_rows": 0,
+      "counter_wraps": 177,
+      "counter_discontinuities": 0,
+      "segments": 1,
+      "flagged_amplitude_rows": 51,
+      "flat_channels": 0,
+      "assumed_sample_rate_hz": 500.0,
+      "sample_duration_seconds_assuming_rate": 90.24,
+      "rows_retained": 45120,
+      "rows_removed": 0,
+      "finite_signal_values_changed": 0
+    },
+    {
+      "dataset": "yes",
+      "filename": "yes_responses (2).csv",
+      "rows": 60000,
+      "channels": 6,
+      "invalid_numeric_cells": 0,
+      "invalid_counter_rows": 0,
+      "duplicate_full_rows": 0,
+      "counter_wraps": 235,
+      "counter_discontinuities": 1,
+      "segments": 2,
+      "flagged_amplitude_rows": 190,
+      "flat_channels": 0,
+      "assumed_sample_rate_hz": 500.0,
+      "sample_duration_seconds_assuming_rate": 120.0,
+      "rows_retained": 60000,
+      "rows_removed": 0,
+      "finite_signal_values_changed": 0
+    },
+    {
+      "dataset": "no",
+      "filename": "no_responses (2).csv",
+      "rows": 61000,
+      "channels": 6,
+      "invalid_numeric_cells": 0,
+      "invalid_counter_rows": 0,
+      "duplicate_full_rows": 0,
+      "counter_wraps": 238,
+      "counter_discontinuities": 1,
+      "segments": 2,
+      "flagged_amplitude_rows": 13,
+      "flat_channels": 0,
+      "assumed_sample_rate_hz": 500.0,
+      "sample_duration_seconds_assuming_rate": 122.0,
+      "rows_retained": 61000,
+      "rows_removed": 0,
+      "finite_signal_values_changed": 0
+    },
+    {
+      "dataset": "mixed",
+      "filename": "yes_no_mixed_responses.csv",
+      "rows": 61000,
+      "channels": 6,
+      "invalid_numeric_cells": 0,
+      "invalid_counter_rows": 0,
+      "duplicate_full_rows": 0,
+      "counter_wraps": 238,
+      "counter_discontinuities": 1,
+      "segments": 2,
+      "flagged_amplitude_rows": 4,
+      "flat_channels": 0,
+      "assumed_sample_rate_hz": 500.0,
+      "sample_duration_seconds_assuming_rate": 122.0,
+      "rows_retained": 61000,
+      "rows_removed": 0,
+      "finite_signal_values_changed": 0
+    },
+    {
+      "dataset": "right",
+      "filename": "right.csv",
+      "rows": 65000,
+      "channels": 6,
+      "invalid_numeric_cells": 0,
+      "invalid_counter_rows": 0,
+      "duplicate_full_rows": 0,
+      "counter_wraps": 254,
+      "counter_discontinuities": 1,
+      "segments": 2,
+      "flagged_amplitude_rows": 343,
+      "flat_channels": 0,
+      "assumed_sample_rate_hz": 500.0,
+      "sample_duration_seconds_assuming_rate": 130.0,
+      "rows_retained": 65000,
+      "rows_removed": 0,
+      "finite_signal_values_changed": 0
+    },
+    {
+      "dataset": "left",
+      "filename": "left.csv",
+      "rows": 61000,
+      "channels": 6,
+      "invalid_numeric_cells": 0,
+      "invalid_counter_rows": 0,
+      "duplicate_full_rows": 0,
+      "counter_wraps": 239,
+      "counter_discontinuities": 1,
+      "segments": 2,
+      "flagged_amplitude_rows": 49,
+      "flat_channels": 0,
+      "assumed_sample_rate_hz": 500.0,
+      "sample_duration_seconds_assuming_rate": 122.0,
+      "rows_retained": 61000,
+      "rows_removed": 0,
+      "finite_signal_values_changed": 0
+    }
+  ],
+  "channel_statistics": [
+    {
+      "dataset": "idle",
+      "channel": "Channel1",
+      "position": "C3",
+      "valid_samples": 45120,
+      "mean": 0.00043512073814134334,
+      "median": 0.01556439352828251,
+      "std": 0.18252193430482244,
+      "rms": 0.18252043032095672,
+      "minimum": -0.8281445837766133,
+      "maximum": 1.237472445869674,
+      "mad": 0.09587350390160843,
+      "p01": -0.42642730771630855,
+      "p99": 0.6295010831753921,
+      "flagged_amplitude_samples": 5,
+      "flagged_amplitude_fraction": 0.00011081560283687943,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "idle",
+      "channel": "Channel2",
+      "position": "C4",
+      "valid_samples": 45120,
+      "mean": 0.00030086428978231167,
+      "median": 0.014741368105278874,
+      "std": 0.1679555022577263,
+      "rms": 0.16795391051527603,
+      "minimum": -0.9759375135409236,
+      "maximum": 1.2869389615376399,
+      "mad": 0.08461042184400247,
+      "p01": -0.4036322035433848,
+      "p99": 0.5651733575780268,
+      "flagged_amplitude_samples": 26,
+      "flagged_amplitude_fraction": 0.000576241134751773,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "idle",
+      "channel": "Channel3",
+      "position": "F3",
+      "valid_samples": 45120,
+      "mean": -4.145043590037794e-05,
+      "median": -0.011644034725171427,
+      "std": 0.11147447783276215,
+      "rms": 0.11147325022127799,
+      "minimum": -0.6101219189000648,
+      "maximum": 0.8978733128302205,
+      "mad": 0.07599634054064512,
+      "p01": -0.19055404995460754,
+      "p99": 0.31964769117184877,
+      "flagged_amplitude_samples": 1,
+      "flagged_amplitude_fraction": 2.2163120567375888e-05,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "idle",
+      "channel": "Channel4",
+      "position": "F4",
+      "valid_samples": 45120,
+      "mean": -0.00023116826482526092,
+      "median": 0.023396339288554238,
+      "std": 0.11579856601708975,
+      "rms": 0.11579751352370839,
+      "minimum": -0.4419873759224995,
+      "maximum": 0.25250316844866677,
+      "mad": 0.08969682587580839,
+      "p01": -0.2542401977202035,
+      "p99": 0.1817557057824611,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "idle",
+      "channel": "Channel5",
+      "position": "P3",
+      "valid_samples": 45120,
+      "mean": 0.00032011087682977667,
+      "median": 0.00444144491723758,
+      "std": 0.21452089539803426,
+      "rms": 0.21451875699795359,
+      "minimum": -1.0976628861295068,
+      "maximum": 1.520687701683363,
+      "mad": 0.09757564129492874,
+      "p01": -0.5060927434912378,
+      "p99": 0.7316976707328016,
+      "flagged_amplitude_samples": 35,
+      "flagged_amplitude_fraction": 0.0007757092198581561,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "idle",
+      "channel": "Channel6",
+      "position": "P4",
+      "valid_samples": 45120,
+      "mean": -8.524416572010173e-05,
+      "median": 0.02522516487483964,
+      "std": 0.11449297886877963,
+      "rms": 0.11449174183493246,
+      "minimum": -0.3354257608415123,
+      "maximum": 0.2087495187399242,
+      "mad": 0.08489604909677487,
+      "p01": -0.2419773776650289,
+      "p99": 0.18590178914111447,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel1",
+      "position": "C3",
+      "valid_samples": 60000,
+      "mean": 0.00024399024223681665,
+      "median": 0.0039769843051360165,
+      "std": 0.1956932165888842,
+      "rms": 0.19569173790997224,
+      "minimum": -0.8672765735474884,
+      "maximum": 1.3857513917762816,
+      "mad": 0.09705203379251494,
+      "p01": -0.4557247540441877,
+      "p99": 0.741626433285056,
+      "flagged_amplitude_samples": 88,
+      "flagged_amplitude_fraction": 0.0014666666666666667,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel2",
+      "position": "C4",
+      "valid_samples": 60000,
+      "mean": 0.001171767979177333,
+      "median": 0.006536774579350646,
+      "std": 0.1790757455078246,
+      "rms": 0.1790780868801923,
+      "minimum": -0.9835562594560509,
+      "maximum": 1.1062351082424589,
+      "mad": 0.09336779754481528,
+      "p01": -0.42611378143962686,
+      "p99": 0.5902378790405105,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel3",
+      "position": "F3",
+      "valid_samples": 60000,
+      "mean": -3.53327340249054e-05,
+      "median": -0.01307061415798457,
+      "std": 0.1338266229513331,
+      "rms": 0.1338255123891188,
+      "minimum": -0.6813256878930504,
+      "maximum": 1.279325952501507,
+      "mad": 0.08242150890912492,
+      "p01": -0.21852395762333046,
+      "p99": 0.3771025955184502,
+      "flagged_amplitude_samples": 73,
+      "flagged_amplitude_fraction": 0.0012166666666666667,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel4",
+      "position": "F4",
+      "valid_samples": 60000,
+      "mean": 3.235602112775175e-06,
+      "median": 0.021798361678834394,
+      "std": 0.11486153716013872,
+      "rms": 0.11486058002224728,
+      "minimum": -0.43771759538322175,
+      "maximum": 0.3786810146503246,
+      "mad": 0.09002708763612177,
+      "p01": -0.2478899827006667,
+      "p99": 0.18626061762404322,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel5",
+      "position": "P3",
+      "valid_samples": 60000,
+      "mean": -0.0005006970305876983,
+      "median": 0.0011424270356567012,
+      "std": 0.22803308582764054,
+      "rms": 0.22803173524341297,
+      "minimum": -1.123701594055924,
+      "maximum": 1.489331488483621,
+      "mad": 0.10993613987743844,
+      "p01": -0.5212770281584923,
+      "p99": 0.7784623755569124,
+      "flagged_amplitude_samples": 39,
+      "flagged_amplitude_fraction": 0.00065,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel6",
+      "position": "P4",
+      "valid_samples": 60000,
+      "mean": 9.623936456906241e-05,
+      "median": 0.020326121429306995,
+      "std": 0.11426495223629053,
+      "rms": 0.1142640405533979,
+      "minimum": -0.5478822436307136,
+      "maximum": 0.39257690173683635,
+      "mad": 0.08830729331636186,
+      "p01": -0.23589787424106773,
+      "p99": 0.1858517369642647,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel1",
+      "position": "C3",
+      "valid_samples": 61000,
+      "mean": 0.00037274682131078406,
+      "median": 0.020850497027240122,
+      "std": 0.15837843775475288,
+      "rms": 0.15837757820205436,
+      "minimum": -0.8738698998697974,
+      "maximum": 1.187430176594001,
+      "mad": 0.0849462570607131,
+      "p01": -0.3958718861327605,
+      "p99": 0.4593862763266449,
+      "flagged_amplitude_samples": 5,
+      "flagged_amplitude_fraction": 8.19672131147541e-05,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel2",
+      "position": "C4",
+      "valid_samples": 61000,
+      "mean": 0.00027170373338029273,
+      "median": 0.024219532188779425,
+      "std": 0.15509572972177096,
+      "rms": 0.15509469643331716,
+      "minimum": -0.9495703994033935,
+      "maximum": 1.3029238498124853,
+      "mad": 0.08460653612813515,
+      "p01": -0.4434101106968005,
+      "p99": 0.34016303444366824,
+      "flagged_amplitude_samples": 9,
+      "flagged_amplitude_fraction": 0.00014754098360655738,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel3",
+      "position": "F3",
+      "valid_samples": 61000,
+      "mean": 5.0441675193894346e-05,
+      "median": 0.01045944985418476,
+      "std": 0.11956277559774442,
+      "rms": 0.11956180621134292,
+      "minimum": -0.7589635170855065,
+      "maximum": 0.8215024427044666,
+      "mad": 0.08664527136347631,
+      "p01": -0.28799134868316956,
+      "p99": 0.24944463886374565,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel4",
+      "position": "F4",
+      "valid_samples": 61000,
+      "mean": 6.346656440086753e-05,
+      "median": 0.019960991817185997,
+      "std": 0.11332233347655167,
+      "rms": 0.11332142237363753,
+      "minimum": -0.8768277670400759,
+      "maximum": 0.581829402420807,
+      "mad": 0.08978997473737803,
+      "p01": -0.22898283931836114,
+      "p99": 0.18503081355593212,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel5",
+      "position": "P3",
+      "valid_samples": 61000,
+      "mean": -6.761732926464307e-05,
+      "median": 0.006594173608580556,
+      "std": 0.17802543829451836,
+      "rms": 0.17802399190489002,
+      "minimum": -1.0000511740692275,
+      "maximum": 1.4145735001506674,
+      "mad": 0.0904363442854926,
+      "p01": -0.40109446914506625,
+      "p99": 0.5198523925326336,
+      "flagged_amplitude_samples": 11,
+      "flagged_amplitude_fraction": 0.000180327868852459,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel6",
+      "position": "P4",
+      "valid_samples": 61000,
+      "mean": -0.00020869732322563802,
+      "median": 0.019113046488453272,
+      "std": 0.11349339054509892,
+      "rms": 0.11349265215054219,
+      "minimum": -0.8230736574441742,
+      "maximum": 0.5205278870996755,
+      "mad": 0.08956594718538063,
+      "p01": -0.2233545491663463,
+      "p99": 0.1852106990145362,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel1",
+      "position": "C3",
+      "valid_samples": 61000,
+      "mean": 0.0011527645627130284,
+      "median": 0.007414530024013211,
+      "std": 0.18157356476148143,
+      "rms": 0.18157573574567817,
+      "minimum": -0.806378297461535,
+      "maximum": 1.2602019936153286,
+      "mad": 0.10586229659683727,
+      "p01": -0.41189684204358773,
+      "p99": 0.5354800879688859,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel2",
+      "position": "C4",
+      "valid_samples": 61000,
+      "mean": 0.0012911857402700753,
+      "median": 0.011494976600079199,
+      "std": 0.17018891619865112,
+      "rms": 0.17019241914208447,
+      "minimum": -0.9357325851773135,
+      "maximum": 0.7338260169690407,
+      "mad": 0.09548142114848894,
+      "p01": -0.41329015793588386,
+      "p99": 0.4639427129516502,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel3",
+      "position": "F3",
+      "valid_samples": 61000,
+      "mean": 0.0002941603758448029,
+      "median": 0.01487242921993974,
+      "std": 0.16665470566611307,
+      "rms": 0.16665359924987402,
+      "minimum": -0.842782549740539,
+      "maximum": 1.3104869264889996,
+      "mad": 0.10746184651957352,
+      "p01": -0.37776671188001065,
+      "p99": 0.48390328982094194,
+      "flagged_amplitude_samples": 2,
+      "flagged_amplitude_fraction": 3.278688524590164e-05,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel4",
+      "position": "F4",
+      "valid_samples": 61000,
+      "mean": -1.1835444540642832e-05,
+      "median": 0.022509703621982253,
+      "std": 0.11804152966920062,
+      "rms": 0.11804056270505915,
+      "minimum": -0.36990246029712404,
+      "maximum": 0.23568017643534225,
+      "mad": 0.09476342056013003,
+      "p01": -0.2653522904726989,
+      "p99": 0.17905381928613964,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel5",
+      "position": "P3",
+      "valid_samples": 61000,
+      "mean": 0.0008022710371572035,
+      "median": 0.02271113755452281,
+      "std": 0.18107147930061754,
+      "rms": 0.18107177241382727,
+      "minimum": -0.9471614810860229,
+      "maximum": 1.4627838045234967,
+      "mad": 0.11340188757013847,
+      "p01": -0.3949967797797245,
+      "p99": 0.547998921095671,
+      "flagged_amplitude_samples": 4,
+      "flagged_amplitude_fraction": 6.557377049180328e-05,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel6",
+      "position": "P4",
+      "valid_samples": 61000,
+      "mean": 2.046573739387081e-06,
+      "median": 0.021696706845287128,
+      "std": 0.10636431793488572,
+      "rms": 0.1063634461123304,
+      "minimum": -0.3367633664767532,
+      "maximum": 0.23180282442344904,
+      "mad": 0.08705646121590824,
+      "p01": -0.2274002394331822,
+      "p99": 0.15967652049190303,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel1",
+      "position": "C3",
+      "valid_samples": 65000,
+      "mean": -0.000545293777094661,
+      "median": 0.005147071542985014,
+      "std": 0.12033947786640947,
+      "rms": 0.12033978762143513,
+      "minimum": -1.1109517364242967,
+      "maximum": 1.0521116726216357,
+      "mad": 0.09709885754828763,
+      "p01": -0.25820812565223783,
+      "p99": 0.19950602481103863,
+      "flagged_amplitude_samples": 0,
+      "flagged_amplitude_fraction": 0.0,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel2",
+      "position": "C4",
+      "valid_samples": 65000,
+      "mean": -0.00029964211250590745,
+      "median": 0.018041727063348632,
+      "std": 0.12524009043135065,
+      "rms": 0.12523948549767175,
+      "minimum": -1.3216472282963965,
+      "maximum": 1.067770477289069,
+      "mad": 0.08676767218037457,
+      "p01": -0.3175387044799922,
+      "p99": 0.21478501775852474,
+      "flagged_amplitude_samples": 5,
+      "flagged_amplitude_fraction": 7.692307692307693e-05,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel3",
+      "position": "F3",
+      "valid_samples": 65000,
+      "mean": -0.0002848145245092435,
+      "median": 0.002326591908313463,
+      "std": 0.0679717533130903,
+      "rms": 0.06797182716681904,
+      "minimum": -0.9772508909430752,
+      "maximum": 1.3720240643959105,
+      "mad": 0.034138119560557,
+      "p01": -0.1902620148590637,
+      "p99": 0.13253808019316007,
+      "flagged_amplitude_samples": 204,
+      "flagged_amplitude_fraction": 0.0031384615384615383,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel4",
+      "position": "F4",
+      "valid_samples": 65000,
+      "mean": -8.143346179882514e-05,
+      "median": -0.0029352114888230862,
+      "std": 0.03862179120671958,
+      "rms": 0.038621579966050715,
+      "minimum": -0.491792458771088,
+      "maximum": 0.5063164723041322,
+      "mad": 0.01826518277283405,
+      "p01": -0.1254706443599993,
+      "p99": 0.11537025585105172,
+      "flagged_amplitude_samples": 63,
+      "flagged_amplitude_fraction": 0.0009692307692307692,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel5",
+      "position": "P3",
+      "valid_samples": 65000,
+      "mean": -0.00029844039406456236,
+      "median": 0.014381066184927946,
+      "std": 0.12642948879891505,
+      "rms": 0.1264288685013714,
+      "minimum": -1.216263098212219,
+      "maximum": 1.1536245589239882,
+      "mad": 0.0951569290070979,
+      "p01": -0.27614181571244095,
+      "p99": 0.2115095253195929,
+      "flagged_amplitude_samples": 2,
+      "flagged_amplitude_fraction": 3.076923076923077e-05,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel6",
+      "position": "P4",
+      "valid_samples": 65000,
+      "mean": -0.00013985867011631617,
+      "median": -0.0026993820031728163,
+      "std": 0.035743015075652744,
+      "rms": 0.03574301375553847,
+      "minimum": -0.46600736801162856,
+      "maximum": 0.5304499729400745,
+      "mad": 0.015507709005142697,
+      "p01": -0.12562927404092097,
+      "p99": 0.11366262543555423,
+      "flagged_amplitude_samples": 156,
+      "flagged_amplitude_fraction": 0.0024,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel1",
+      "position": "C3",
+      "valid_samples": 61000,
+      "mean": 8.505862837518549e-05,
+      "median": -0.009418462219971752,
+      "std": 0.06516561377831752,
+      "rms": 0.06516513514436222,
+      "minimum": -1.2115448609568449,
+      "maximum": 0.6812172587811505,
+      "mad": 0.029213908101766536,
+      "p01": -0.12974911231167346,
+      "p99": 0.21555107174711352,
+      "flagged_amplitude_samples": 29,
+      "flagged_amplitude_fraction": 0.00047540983606557375,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel2",
+      "position": "C4",
+      "valid_samples": 61000,
+      "mean": 0.00011618303262690516,
+      "median": -0.008639977044438196,
+      "std": 0.05824219667195703,
+      "rms": 0.058241835158231926,
+      "minimum": -1.1937557029923926,
+      "maximum": 0.6460646693223975,
+      "mad": 0.025639831765950902,
+      "p01": -0.11234621276469377,
+      "p99": 0.19387551904707362,
+      "flagged_amplitude_samples": 44,
+      "flagged_amplitude_fraction": 0.000721311475409836,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel3",
+      "position": "F3",
+      "valid_samples": 61000,
+      "mean": 7.2287116810965e-06,
+      "median": 0.003448899948806372,
+      "std": 0.08776657541263815,
+      "rms": 0.08776585630922201,
+      "minimum": -1.005581373572383,
+      "maximum": 0.6731721972513851,
+      "mad": 0.05889095571549571,
+      "p01": -0.21020959511785625,
+      "p99": 0.2340568307600867,
+      "flagged_amplitude_samples": 3,
+      "flagged_amplitude_fraction": 4.9180327868852456e-05,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel4",
+      "position": "F4",
+      "valid_samples": 61000,
+      "mean": -5.678170387407854e-06,
+      "median": -0.0016188173769976916,
+      "std": 0.05186919094579582,
+      "rms": 0.051868766097550464,
+      "minimum": -0.6796765740907564,
+      "maximum": 0.5028490377307966,
+      "mad": 0.02431253229620447,
+      "p01": -0.11494084482138664,
+      "p99": 0.17295449099939028,
+      "flagged_amplitude_samples": 16,
+      "flagged_amplitude_fraction": 0.00026229508196721314,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel5",
+      "position": "P3",
+      "valid_samples": 61000,
+      "mean": 0.00011302053638307404,
+      "median": 0.013299716758487734,
+      "std": 0.12560633700406074,
+      "rms": 0.12560535828802707,
+      "minimum": -1.2083237022790367,
+      "maximum": 0.5606054552570798,
+      "mad": 0.09120147527124348,
+      "p01": -0.27176060496871907,
+      "p99": 0.32034364283426103,
+      "flagged_amplitude_samples": 2,
+      "flagged_amplitude_fraction": 3.278688524590164e-05,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel6",
+      "position": "P4",
+      "valid_samples": 61000,
+      "mean": 2.505067905100796e-05,
+      "median": -0.0055659070850184456,
+      "std": 0.0392467236068628,
+      "rms": 0.03924640990591647,
+      "minimum": -0.5539740793981949,
+      "maximum": 0.3878097394183637,
+      "mad": 0.018087862674639743,
+      "p01": -0.07534283706363898,
+      "p99": 0.13601471848559632,
+      "flagged_amplitude_samples": 20,
+      "flagged_amplitude_fraction": 0.0003278688524590164,
+      "min_value_occurrences": 1,
+      "max_value_occurrences": 1
+    }
+  ],
+  "counter_events": [
+    {
+      "dataset": "yes",
+      "sample_before": 249,
+      "source_csv_row_before": 251,
+      "sample_after": 250,
+      "source_csv_row_after": 252,
+      "counter_before": 7.0,
+      "counter_after": 194.0,
+      "raw_counter_change": 187.0,
+      "action": "Start new analysis segment; preserve values"
+    },
+    {
+      "dataset": "no",
+      "sample_before": 459,
+      "source_csv_row_before": 461,
+      "sample_after": 460,
+      "source_csv_row_after": 462,
+      "counter_before": 243.0,
+      "counter_after": 182.0,
+      "raw_counter_change": -61.0,
+      "action": "Start new analysis segment; preserve values"
+    },
+    {
+      "dataset": "mixed",
+      "sample_before": 279,
+      "source_csv_row_before": 281,
+      "sample_after": 280,
+      "source_csv_row_after": 282,
+      "counter_before": 73.0,
+      "counter_after": 8.0,
+      "raw_counter_change": -65.0,
+      "action": "Start new analysis segment; preserve values"
+    },
+    {
+      "dataset": "right",
+      "sample_before": 279,
+      "source_csv_row_before": 281,
+      "sample_after": 280,
+      "source_csv_row_after": 282,
+      "counter_before": 79.0,
+      "counter_after": 176.0,
+      "raw_counter_change": 97.0,
+      "action": "Start new analysis segment; preserve values"
+    },
+    {
+      "dataset": "left",
+      "sample_before": 209,
+      "source_csv_row_before": 211,
+      "sample_after": 210,
+      "source_csv_row_after": 212,
+      "counter_before": 81.0,
+      "counter_after": 216.0,
+      "raw_counter_change": 135.0,
+      "action": "Start new analysis segment; preserve values"
+    }
+  ],
+  "cleaning_log": [
+    {
+      "dataset": "idle",
+      "operation": "Preserve source snapshot",
+      "affected_or_flagged_count": 0,
+      "note": "Byte-for-byte copy with SHA-256; original Downloads file untouched"
+    },
+    {
+      "dataset": "idle",
+      "operation": "Numeric validation",
+      "affected_or_flagged_count": 0,
+      "note": "Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs"
+    },
+    {
+      "dataset": "idle",
+      "operation": "Counter segmentation",
+      "affected_or_flagged_count": 0,
+      "note": "Boundary flags only; not inferred clock time or proven packet loss"
+    },
+    {
+      "dataset": "idle",
+      "operation": "Amplitude review flags",
+      "affected_or_flagged_count": 51,
+      "note": "Within-file/channel median/MAD threshold; all flagged values retained"
+    },
+    {
+      "dataset": "idle",
+      "operation": "Signal transformation",
+      "affected_or_flagged_count": 0,
+      "note": "No new filters, unit conversion, rereferencing, normalization or interpolation"
+    },
+    {
+      "dataset": "idle",
+      "operation": "Row removal",
+      "affected_or_flagged_count": 0,
+      "note": "All source rows retained in original order"
+    },
+    {
+      "dataset": "yes",
+      "operation": "Preserve source snapshot",
+      "affected_or_flagged_count": 0,
+      "note": "Byte-for-byte copy with SHA-256; original Downloads file untouched"
+    },
+    {
+      "dataset": "yes",
+      "operation": "Numeric validation",
+      "affected_or_flagged_count": 0,
+      "note": "Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs"
+    },
+    {
+      "dataset": "yes",
+      "operation": "Counter segmentation",
+      "affected_or_flagged_count": 1,
+      "note": "Boundary flags only; not inferred clock time or proven packet loss"
+    },
+    {
+      "dataset": "yes",
+      "operation": "Amplitude review flags",
+      "affected_or_flagged_count": 190,
+      "note": "Within-file/channel median/MAD threshold; all flagged values retained"
+    },
+    {
+      "dataset": "yes",
+      "operation": "Signal transformation",
+      "affected_or_flagged_count": 0,
+      "note": "No new filters, unit conversion, rereferencing, normalization or interpolation"
+    },
+    {
+      "dataset": "yes",
+      "operation": "Row removal",
+      "affected_or_flagged_count": 0,
+      "note": "All source rows retained in original order"
+    },
+    {
+      "dataset": "no",
+      "operation": "Preserve source snapshot",
+      "affected_or_flagged_count": 0,
+      "note": "Byte-for-byte copy with SHA-256; original Downloads file untouched"
+    },
+    {
+      "dataset": "no",
+      "operation": "Numeric validation",
+      "affected_or_flagged_count": 0,
+      "note": "Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs"
+    },
+    {
+      "dataset": "no",
+      "operation": "Counter segmentation",
+      "affected_or_flagged_count": 1,
+      "note": "Boundary flags only; not inferred clock time or proven packet loss"
+    },
+    {
+      "dataset": "no",
+      "operation": "Amplitude review flags",
+      "affected_or_flagged_count": 13,
+      "note": "Within-file/channel median/MAD threshold; all flagged values retained"
+    },
+    {
+      "dataset": "no",
+      "operation": "Signal transformation",
+      "affected_or_flagged_count": 0,
+      "note": "No new filters, unit conversion, rereferencing, normalization or interpolation"
+    },
+    {
+      "dataset": "no",
+      "operation": "Row removal",
+      "affected_or_flagged_count": 0,
+      "note": "All source rows retained in original order"
+    },
+    {
+      "dataset": "mixed",
+      "operation": "Preserve source snapshot",
+      "affected_or_flagged_count": 0,
+      "note": "Byte-for-byte copy with SHA-256; original Downloads file untouched"
+    },
+    {
+      "dataset": "mixed",
+      "operation": "Numeric validation",
+      "affected_or_flagged_count": 0,
+      "note": "Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs"
+    },
+    {
+      "dataset": "mixed",
+      "operation": "Counter segmentation",
+      "affected_or_flagged_count": 1,
+      "note": "Boundary flags only; not inferred clock time or proven packet loss"
+    },
+    {
+      "dataset": "mixed",
+      "operation": "Amplitude review flags",
+      "affected_or_flagged_count": 4,
+      "note": "Within-file/channel median/MAD threshold; all flagged values retained"
+    },
+    {
+      "dataset": "mixed",
+      "operation": "Signal transformation",
+      "affected_or_flagged_count": 0,
+      "note": "No new filters, unit conversion, rereferencing, normalization or interpolation"
+    },
+    {
+      "dataset": "mixed",
+      "operation": "Row removal",
+      "affected_or_flagged_count": 0,
+      "note": "All source rows retained in original order"
+    },
+    {
+      "dataset": "right",
+      "operation": "Preserve source snapshot",
+      "affected_or_flagged_count": 0,
+      "note": "Byte-for-byte copy with SHA-256; original Downloads file untouched"
+    },
+    {
+      "dataset": "right",
+      "operation": "Numeric validation",
+      "affected_or_flagged_count": 0,
+      "note": "Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs"
+    },
+    {
+      "dataset": "right",
+      "operation": "Counter segmentation",
+      "affected_or_flagged_count": 1,
+      "note": "Boundary flags only; not inferred clock time or proven packet loss"
+    },
+    {
+      "dataset": "right",
+      "operation": "Amplitude review flags",
+      "affected_or_flagged_count": 343,
+      "note": "Within-file/channel median/MAD threshold; all flagged values retained"
+    },
+    {
+      "dataset": "right",
+      "operation": "Signal transformation",
+      "affected_or_flagged_count": 0,
+      "note": "No new filters, unit conversion, rereferencing, normalization or interpolation"
+    },
+    {
+      "dataset": "right",
+      "operation": "Row removal",
+      "affected_or_flagged_count": 0,
+      "note": "All source rows retained in original order"
+    },
+    {
+      "dataset": "left",
+      "operation": "Preserve source snapshot",
+      "affected_or_flagged_count": 0,
+      "note": "Byte-for-byte copy with SHA-256; original Downloads file untouched"
+    },
+    {
+      "dataset": "left",
+      "operation": "Numeric validation",
+      "affected_or_flagged_count": 0,
+      "note": "Nonfinite/unparseable cells become blank in annotated copy only; no affected cells in current inputs"
+    },
+    {
+      "dataset": "left",
+      "operation": "Counter segmentation",
+      "affected_or_flagged_count": 1,
+      "note": "Boundary flags only; not inferred clock time or proven packet loss"
+    },
+    {
+      "dataset": "left",
+      "operation": "Amplitude review flags",
+      "affected_or_flagged_count": 49,
+      "note": "Within-file/channel median/MAD threshold; all flagged values retained"
+    },
+    {
+      "dataset": "left",
+      "operation": "Signal transformation",
+      "affected_or_flagged_count": 0,
+      "note": "No new filters, unit conversion, rereferencing, normalization or interpolation"
+    },
+    {
+      "dataset": "left",
+      "operation": "Row removal",
+      "affected_or_flagged_count": 0,
+      "note": "All source rows retained in original order"
+    }
+  ],
+  "correlation_pairs": [
+    {
+      "dataset": "idle",
+      "channel_a": "Channel1",
+      "channel_b": "Channel2",
+      "correlation": 0.8416196204371401
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel1",
+      "channel_b": "Channel3",
+      "correlation": 0.03169375661991427
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel1",
+      "channel_b": "Channel4",
+      "correlation": 0.19805536688672074
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel1",
+      "channel_b": "Channel5",
+      "correlation": 0.68651527614688
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel1",
+      "channel_b": "Channel6",
+      "correlation": 0.20095193365123684
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel2",
+      "channel_b": "Channel3",
+      "correlation": 0.1826481105942158
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel2",
+      "channel_b": "Channel4",
+      "correlation": -0.10763761325264923
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel2",
+      "channel_b": "Channel5",
+      "correlation": 0.5790331554474227
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel2",
+      "channel_b": "Channel6",
+      "correlation": -0.09900335235412118
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel3",
+      "channel_b": "Channel4",
+      "correlation": -0.23627658057609655
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel3",
+      "channel_b": "Channel5",
+      "correlation": 0.18954586057308298
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel3",
+      "channel_b": "Channel6",
+      "correlation": -0.3230999929001642
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel4",
+      "channel_b": "Channel5",
+      "correlation": 0.2496095893471247
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel4",
+      "channel_b": "Channel6",
+      "correlation": 0.9702744757288824
+    },
+    {
+      "dataset": "idle",
+      "channel_a": "Channel5",
+      "channel_b": "Channel6",
+      "correlation": 0.2744674066323123
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel1",
+      "channel_b": "Channel2",
+      "correlation": 0.9099793626136468
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel1",
+      "channel_b": "Channel3",
+      "correlation": 0.0790220148752182
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel1",
+      "channel_b": "Channel4",
+      "correlation": 0.22099063578990083
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel1",
+      "channel_b": "Channel5",
+      "correlation": 0.629345918292178
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel1",
+      "channel_b": "Channel6",
+      "correlation": 0.22354991995635926
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel2",
+      "channel_b": "Channel3",
+      "correlation": 0.19197356328482953
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel2",
+      "channel_b": "Channel4",
+      "correlation": 0.05997633877988083
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel2",
+      "channel_b": "Channel5",
+      "correlation": 0.5950824545859688
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel2",
+      "channel_b": "Channel6",
+      "correlation": 0.0680266005665429
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel3",
+      "channel_b": "Channel4",
+      "correlation": -0.2192404959084187
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel3",
+      "channel_b": "Channel5",
+      "correlation": 0.39093042995742866
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel3",
+      "channel_b": "Channel6",
+      "correlation": -0.2803715854153553
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel4",
+      "channel_b": "Channel5",
+      "correlation": 0.16198951555871616
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel4",
+      "channel_b": "Channel6",
+      "correlation": 0.9667328210692216
+    },
+    {
+      "dataset": "yes",
+      "channel_a": "Channel5",
+      "channel_b": "Channel6",
+      "correlation": 0.19039481266639724
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel1",
+      "channel_b": "Channel2",
+      "correlation": 0.7939198314578438
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel1",
+      "channel_b": "Channel3",
+      "correlation": 0.5958526399748464
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel1",
+      "channel_b": "Channel4",
+      "correlation": -0.016722452138670473
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel1",
+      "channel_b": "Channel5",
+      "correlation": 0.7609579110422204
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel1",
+      "channel_b": "Channel6",
+      "correlation": 0.04921784050239075
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel2",
+      "channel_b": "Channel3",
+      "correlation": 0.13002736269899715
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel2",
+      "channel_b": "Channel4",
+      "correlation": -0.36337628146458145
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel2",
+      "channel_b": "Channel5",
+      "correlation": 0.7336519524599876
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel2",
+      "channel_b": "Channel6",
+      "correlation": -0.3328395663142353
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel3",
+      "channel_b": "Channel4",
+      "correlation": 0.5591083444765448
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel3",
+      "channel_b": "Channel5",
+      "correlation": 0.4625539850856005
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel3",
+      "channel_b": "Channel6",
+      "correlation": 0.634483776168803
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel4",
+      "channel_b": "Channel5",
+      "correlation": -0.13693011973305047
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel4",
+      "channel_b": "Channel6",
+      "correlation": 0.9615109047401846
+    },
+    {
+      "dataset": "no",
+      "channel_a": "Channel5",
+      "channel_b": "Channel6",
+      "correlation": -0.08416716615199993
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel1",
+      "channel_b": "Channel2",
+      "correlation": 0.7262608342521346
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel1",
+      "channel_b": "Channel3",
+      "correlation": 0.6662647558887096
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel1",
+      "channel_b": "Channel4",
+      "correlation": 0.47657739836521756
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel1",
+      "channel_b": "Channel5",
+      "correlation": 0.547827247004418
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel1",
+      "channel_b": "Channel6",
+      "correlation": 0.4846374253197773
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel2",
+      "channel_b": "Channel3",
+      "correlation": 0.6168430571349754
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel2",
+      "channel_b": "Channel4",
+      "correlation": 0.24026047690447894
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel2",
+      "channel_b": "Channel5",
+      "correlation": 0.4707157792664378
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel2",
+      "channel_b": "Channel6",
+      "correlation": 0.29891421435043203
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel3",
+      "channel_b": "Channel4",
+      "correlation": 0.6876998238407953
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel3",
+      "channel_b": "Channel5",
+      "correlation": 0.8833473590674837
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel3",
+      "channel_b": "Channel6",
+      "correlation": 0.6794029498459204
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel4",
+      "channel_b": "Channel5",
+      "correlation": 0.6703237906493332
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel4",
+      "channel_b": "Channel6",
+      "correlation": 0.9491224002593086
+    },
+    {
+      "dataset": "mixed",
+      "channel_a": "Channel5",
+      "channel_b": "Channel6",
+      "correlation": 0.6059448022861345
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel1",
+      "channel_b": "Channel2",
+      "correlation": 0.8056297530740847
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel1",
+      "channel_b": "Channel3",
+      "correlation": 0.49492797865693156
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel1",
+      "channel_b": "Channel4",
+      "correlation": -0.05369376422206469
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel1",
+      "channel_b": "Channel5",
+      "correlation": 0.7529870532862764
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel1",
+      "channel_b": "Channel6",
+      "correlation": -0.00775840276664551
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel2",
+      "channel_b": "Channel3",
+      "correlation": 0.22558151787737651
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel2",
+      "channel_b": "Channel4",
+      "correlation": -0.11156873213618516
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel2",
+      "channel_b": "Channel5",
+      "correlation": 0.4071856568758342
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel2",
+      "channel_b": "Channel6",
+      "correlation": -0.048572908269686445
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel3",
+      "channel_b": "Channel4",
+      "correlation": 0.3373449930576157
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel3",
+      "channel_b": "Channel5",
+      "correlation": 0.6174359152896182
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel3",
+      "channel_b": "Channel6",
+      "correlation": 0.333261162384234
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel4",
+      "channel_b": "Channel5",
+      "correlation": -0.09157645208279468
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel4",
+      "channel_b": "Channel6",
+      "correlation": 0.7552589396081959
+    },
+    {
+      "dataset": "right",
+      "channel_a": "Channel5",
+      "channel_b": "Channel6",
+      "correlation": -0.02419110087084135
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel1",
+      "channel_b": "Channel2",
+      "correlation": 0.9480443154152589
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel1",
+      "channel_b": "Channel3",
+      "correlation": 0.7482233997245475
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel1",
+      "channel_b": "Channel4",
+      "correlation": 0.8155128494899779
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel1",
+      "channel_b": "Channel5",
+      "correlation": 0.5348767778529735
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel1",
+      "channel_b": "Channel6",
+      "correlation": 0.7609280273618653
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel2",
+      "channel_b": "Channel3",
+      "correlation": 0.6559278214289687
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel2",
+      "channel_b": "Channel4",
+      "correlation": 0.7918057374953981
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel2",
+      "channel_b": "Channel5",
+      "correlation": 0.4751044290701036
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel2",
+      "channel_b": "Channel6",
+      "correlation": 0.7963220986145069
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel3",
+      "channel_b": "Channel4",
+      "correlation": 0.8447017638201302
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel3",
+      "channel_b": "Channel5",
+      "correlation": 0.8303535773853983
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel3",
+      "channel_b": "Channel6",
+      "correlation": 0.6144347106978764
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel4",
+      "channel_b": "Channel5",
+      "correlation": 0.679151457157585
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel4",
+      "channel_b": "Channel6",
+      "correlation": 0.8460292388006188
+    },
+    {
+      "dataset": "left",
+      "channel_a": "Channel5",
+      "channel_b": "Channel6",
+      "correlation": 0.4811014742072295
+    }
+  ],
+  "spectral_peaks": [
+    {
+      "dataset": "idle",
+      "channel": "Channel1",
+      "position": "C3",
+      "peak_cycles_per_sample": 0.00048828125,
+      "peak_hz_assuming_rate": 0.244140625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 43,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "idle",
+      "channel": "Channel2",
+      "position": "C4",
+      "peak_cycles_per_sample": 0.00048828125,
+      "peak_hz_assuming_rate": 0.244140625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 43,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "idle",
+      "channel": "Channel3",
+      "position": "F3",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 43,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "idle",
+      "channel": "Channel4",
+      "position": "F4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 43,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "idle",
+      "channel": "Channel5",
+      "position": "P3",
+      "peak_cycles_per_sample": 0.00048828125,
+      "peak_hz_assuming_rate": 0.244140625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 43,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "idle",
+      "channel": "Channel6",
+      "position": "P4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 43,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel1",
+      "position": "C3",
+      "peak_cycles_per_sample": 0.00048828125,
+      "peak_hz_assuming_rate": 0.244140625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 57,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel2",
+      "position": "C4",
+      "peak_cycles_per_sample": 0.00048828125,
+      "peak_hz_assuming_rate": 0.244140625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 57,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel3",
+      "position": "F3",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 57,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel4",
+      "position": "F4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 57,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel5",
+      "position": "P3",
+      "peak_cycles_per_sample": 0.00048828125,
+      "peak_hz_assuming_rate": 0.244140625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 57,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "yes",
+      "channel": "Channel6",
+      "position": "P4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 57,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel1",
+      "position": "C3",
+      "peak_cycles_per_sample": 0.00048828125,
+      "peak_hz_assuming_rate": 0.244140625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel2",
+      "position": "C4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel3",
+      "position": "F3",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel4",
+      "position": "F4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel5",
+      "position": "P3",
+      "peak_cycles_per_sample": 0.0009765625,
+      "peak_hz_assuming_rate": 0.48828125,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "no",
+      "channel": "Channel6",
+      "position": "P4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel1",
+      "position": "C3",
+      "peak_cycles_per_sample": 0.00048828125,
+      "peak_hz_assuming_rate": 0.244140625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel2",
+      "position": "C4",
+      "peak_cycles_per_sample": 0.00048828125,
+      "peak_hz_assuming_rate": 0.244140625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel3",
+      "position": "F3",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel4",
+      "position": "F4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel5",
+      "position": "P3",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "mixed",
+      "channel": "Channel6",
+      "position": "P4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel1",
+      "position": "C3",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 62,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel2",
+      "position": "C4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 62,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel3",
+      "position": "F3",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 62,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel4",
+      "position": "F4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 62,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel5",
+      "position": "P3",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 62,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "right",
+      "channel": "Channel6",
+      "position": "P4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 62,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel1",
+      "position": "C3",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel2",
+      "position": "C4",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel3",
+      "position": "F3",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel4",
+      "position": "F4",
+      "peak_cycles_per_sample": 0.115234375,
+      "peak_hz_assuming_rate": 57.6171875,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel5",
+      "position": "P3",
+      "peak_cycles_per_sample": 0.19970703125,
+      "peak_hz_assuming_rate": 99.853515625,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    },
+    {
+      "dataset": "left",
+      "channel": "Channel6",
+      "position": "P4",
+      "peak_cycles_per_sample": 0.115234375,
+      "peak_hz_assuming_rate": 57.6171875,
+      "assumed_sample_rate_hz": 500.0,
+      "welch_windows": 58,
+      "interpretation": "Exported-signal peak; source/filter/physiological cause unverified"
+    }
+  ],
+  "findings": [
+    "All six files contain the expected Counter plus six-channel schema, with 353,120 total sample rows.",
+    "0 missing/nonfinite/unparseable numeric cells and 0 duplicate complete rows were found. No rows were deleted.",
+    "5 non-wrap counter discontinuities were found across 5 files. All occur at acquired sample indices 210\u2013460 (zero-based). Causes remain unverified.",
+    "The strongest channel correlation is 0.970 between Channel4 and Channel6 in idle. Correlation is not evidence that a channel is faulty or that its signal is neural.",
+    "24 of 36 channel/recording spectra have their largest non-DC peak near 0.20 cycles/sample. This would be about 100 Hz if the provisional 500 Hz rate is correct. The repeated peak warrants review of interference and export processing; its cause is not identified by EDA.",
+    "YES/NO files include thinking and speaking. Changes may reflect speech, muscle/eye activity, recording conditions or neural activity; EDA cannot separate their contributions.",
+    "There are no within-file task markers or verified acquisition timestamps. The mixed file cannot be scored as a labelled YES/NO test from its name alone.",
+    "No model was trained and no classification accuracy is claimed. Thousands of neighboring samples are not thousands of independent word trials."
+  ],
+  "recordings": [
+    {
+      "id": "idle",
+      "filename": "normal (2).csv",
+      "condition": "Normal/idle, as described by user",
+      "sha256": "02884b4aa16a959d58a026c6a3f4c1e31c21e9bdbf34be1aab3cabebc04fb3dc",
+      "rows": 45120
+    },
+    {
+      "id": "yes",
+      "filename": "yes_responses (2).csv",
+      "condition": "Question answering; thought about YES and said answer aloud",
+      "sha256": "418a2fd357c4007a15326fa0a500a2f8dd9e40cab8baee7a89a376661a54f5d0",
+      "rows": 60000
+    },
+    {
+      "id": "no",
+      "filename": "no_responses (2).csv",
+      "condition": "Question answering; thought about NO and said answer aloud",
+      "sha256": "1f5aa09b079bf3c92e5b4afdef5b3335a513c29b75d9ab80d71dbdc85c5b0090",
+      "rows": 61000
+    },
+    {
+      "id": "mixed",
+      "filename": "yes_no_mixed_responses.csv",
+      "condition": "Mixed question answers, including speaking; word/onset timing not supplied",
+      "sha256": "c5b867b224a3debc8d2b0bd7ff63d09261b31140ea511ef5b88dc03f43cec2da",
+      "rows": 61000
+    },
+    {
+      "id": "right",
+      "filename": "right.csv",
+      "condition": "Right clenching, as described by user; exact body part and task timing unconfirmed",
+      "sha256": "fd3d49de2178631291ea3b796d31a9766ac8eae4d9cde376091a236f9d2254cd",
+      "rows": 65000
+    },
+    {
+      "id": "left",
+      "filename": "left.csv",
+      "condition": "Left clenching, as described by user; exact body part and task timing unconfirmed",
+      "sha256": "f67de833924e35f09ef8eeb201410b51919816395a6cf81264459516ff2b51e6",
+      "rows": 61000
+    }
+  ]
+}
